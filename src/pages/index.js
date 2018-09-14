@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import avatar from "../images/avatar.jpg";
 import banner from "../images/banner.jpg";
 import pic01 from "../images/pic01.jpg";
@@ -44,27 +45,20 @@ const IndexPage = () => (
       <footer>
         <ul className="icons">
           <li>
-            <a href="#" className="icon fa-twitter">
-              <span className="label">Twitter</span>
+            <a href="#" className="icon">
+              <FontAwesomeIcon icon={["fab", "linkedin"]} />
+              <span className="label">LinkedIn</span>
             </a>
           </li>
           <li>
-            <a href="#" className="icon fa-facebook">
-              <span className="label">Facebook</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="icon fa-instagram">
-              <span className="label">Instagram</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="icon fa-github">
+            <a href="#" className="icon">
+              <FontAwesomeIcon icon={["fab", "github"]} />
               <span className="label">Github</span>
             </a>
           </li>
           <li>
             <a href="#" className="icon fa-envelope">
+              <FontAwesomeIcon icon="envelope" />
               <span className="label">Email</span>
             </a>
           </li>
