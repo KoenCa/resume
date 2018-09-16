@@ -1,0 +1,230 @@
+@import '../../sass/libs/vars';
+@import '../../sass/libs/functions';
+@import '../../sass/libs/mixins';
+@import '../../sass/libs/vendor';
+@import '../../sass/libs/breakpoints';
+
+@include breakpoints((
+    xlarge:   ( 1281px,  1680px ),
+    large:    ( 1025px,  1280px ),
+    medium:   ( 737px,   1024px ),
+    small:    ( 481px,   736px  ),
+    xsmall:   ( null,    480px  ),
+));
+
+$size-header: 23em;
+
+.sidebar {
+    @include vendor('display', 'flex');
+    @include vendor('flex-direction', 'column');
+    @include vendor('justify-content', 'space-between');
+    background: _palette(header, bg);
+    color: _palette(header, fg);
+    height: 100%;
+    overflow-y: auto;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: $size-header;
+
+    @if _misc(header-side) == 'right' {
+        right: 0;
+    }
+    @else {
+        left: 0;
+    }
+}
+
+.header {
+    @include vendor('flex-shrink', '0');
+    padding: 3em;
+
+    h1 {
+        color: _palette(header, fg-bold);
+        font-size: 1.75em;
+        margin: 0;
+
+        a {
+            color: _palette(header, fg-bold) !important;
+        }
+    }
+
+    p {
+        color: _palette(header, fg);
+        font-style: italic;
+        margin: 1em 0 0 0;
+    }
+}
+
+.avatar {
+    display: block;
+    margin: 0 auto _size(element-margin) auto;
+    width: 8em;
+}
+
+.nav {
+    @include vendor('flex-grow', '1');
+}
+
+.navList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navListItem {
+    border-top: solid _size(border-width) _palette(header, border);
+    display: block;
+    padding: 0;
+
+    &:first-child {
+        border-top: 0;
+    }
+
+    a {
+        @include vendor('transition', 'none');
+        border: 0;
+        color: _palette(header, fg-bold) !important;
+        display: block;
+        padding: 0.85em 0;
+        text-decoration: none;
+
+        &.active {
+            background: _palette(bg);
+            color: _palette(header, bg) !important;
+        }
+    }
+}
+
+.footer {
+    @include vendor('flex-shrink', '0');
+    bottom: 0;
+    left: 0;
+    padding: 2em;
+    width: 100%;
+}
+
+.footerIcons {
+    margin: 0;
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+}
+
+.footerIcon {
+    display: inline-block;
+    padding: 0 1em 0 0;
+
+    &:last-child {
+        padding-right: 0 !important;
+    }
+
+    &:before {
+        font-size: 1.25em;
+    }
+
+    a {
+        &:hover {
+            color: _palette(header, fg-bold) !important;
+        }
+
+        color: _palette(header, fg-light) !important;
+    }
+}
+
+@include breakpoint('<=xlarge') {
+    $size-header: 21em;
+
+    .sidebar {
+        width: $size-header;
+
+    }
+
+    .header {
+        padding: 2em;
+    }
+
+    .footer {
+        padding: 1.5em;
+    }
+}
+
+@include breakpoint('<=large') {
+    $size-header: 20em;
+
+    .sidebar {
+        width: $size-header;
+    }
+}
+
+@include breakpoint('<=medium') {
+
+    .sidebar {
+        @include vendor('backface-visibility', 'hidden');
+        @include vendor('transition', ('transform #{_duration(header)} ease'));
+        display: block;
+        height: 100%;
+        overflow-y: auto;
+        position: fixed;
+        top: 0;
+        width: $size-header;
+        z-index: _misc(z-index-base) + 2;
+
+        @if _misc(header-side) == 'right' {
+            @include vendor('transform', 'translateX(#{$size-header})');
+            right: 0;
+        }
+        @else {
+            @include vendor('transform', 'translateX(#{$size-header * -1})');
+            left: 0;
+        }
+    }
+
+    .footer {
+        bottom: auto;
+        left: auto;
+        margin: 0.5em 0 0 0;
+        position: relative;
+        right: auto;
+        top: auto;
+    }
+}
+
+@include breakpoint('<=small') {
+
+    $size-header: 17em;
+
+    .sidebar {
+        width: $size-header;
+
+        @if _misc(header-side) == 'right' {
+            @include vendor('transform', 'translateX(#{$size-header})');
+            right: 0;
+        }
+        @else {
+            @include vendor('transform', 'translateX(#{$size-header * -1})');
+            left: 0;
+        }
+    }
+
+    .header {
+        padding: 2em;
+
+        h1 {
+            font-size: 1.5em;
+        }
+
+        p {
+            margin: 1em 0 0 0;
+        }
+    }
+
+    .avatar {
+        margin: 0 auto (_size(element-margin) * 0.75) auto;
+        width: 6em;
+    }
+
+    .footer {
+        padding: 1.5em;
+    }
+}

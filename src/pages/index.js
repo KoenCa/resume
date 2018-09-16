@@ -1,7 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import avatar from "../images/avatar.jpg";
+import Sidebar from "src/components/sidebar/sidebar.js";
 import banner from "../images/banner.jpg";
 import pic01 from "../images/pic01.jpg";
 import pic02 from "../images/pic02.jpg";
@@ -11,61 +9,7 @@ import Layout from "../components/layout";
 
 const IndexPage = () => (
   <Layout>
-    <section id="header">
-      <header>
-        <span className="image avatar">
-          <img src={avatar} alt="" />
-        </span>
-        <h1 id="logo">
-          <a href="#">Willis Corto</a>
-        </h1>
-        <p>
-          I got reprogrammed by a rogue AI
-          <br /> and now I'm totally cray
-        </p>
-      </header>
-      <nav id="nav">
-        <ul>
-          <li>
-            <a href="#one" className="active">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#two">Things I Can Do</a>
-          </li>
-          <li>
-            <a href="#three">A Few Accomplishments</a>
-          </li>
-          <li>
-            <a href="#four">Contact</a>
-          </li>
-        </ul>
-      </nav>
-      <footer>
-        <ul className="icons">
-          <li>
-            <a href="#" className="icon">
-              <FontAwesomeIcon icon={["fab", "linkedin"]} />
-              <span className="label">LinkedIn</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="icon">
-              <FontAwesomeIcon icon={["fab", "github"]} />
-              <span className="label">Github</span>
-            </a>
-          </li>
-          <li>
-            <a href="#" className="icon fa-envelope">
-              <FontAwesomeIcon icon="envelope" />
-              <span className="label">Email</span>
-            </a>
-          </li>
-        </ul>
-      </footer>
-    </section>
-
+    <Sidebar />
     <div id="wrapper">
       <div id="main">
         <section id="one">
@@ -701,9 +645,7 @@ const IndexPage = () => (
           </div>
           <h5>Left &amp; Right</h5>
           <p>
-            <span className="image left">
-              <img src={avatar} alt="" />
-            </span>
+            <span className="image left" />
             Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis
             sagittis eget. tempus euismod. Vestibulum ante ipsum primis in
             faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac
@@ -721,9 +663,7 @@ const IndexPage = () => (
             praesent.
           </p>
           <p>
-            <span className="image right">
-              <img src={avatar} alt="" />
-            </span>
+            <span className="image right" />
             Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis
             sagittis eget. tempus euismod. Vestibulum ante ipsum primis in
             faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac
