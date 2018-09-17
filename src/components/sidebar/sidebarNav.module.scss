@@ -1,0 +1,38 @@
+@import '../../sass/libs/vars';
+@import '../../sass/libs/functions';
+@import '../../sass/libs/mixins';
+@import '../../sass/libs/vendor';
+
+.nav {
+    @include vendor('flex-grow', '1');
+}
+
+.navList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navListItem {
+    border-top: solid _size(border-width) _palette(header, border);
+    display: block;
+    padding: 0;
+
+    &:first-child {
+        border-top: 0;
+    }
+
+    a {
+        @include vendor('transition', 'none');
+        border: 0;
+        color: _palette(header, fg-bold) !important;
+        display: block;
+        padding: 0.85em 0;
+        text-decoration: none;
+
+        &.active {
+            background: _palette(bg);
+            color: _palette(header, bg) !important;
+        }
+    }
+}

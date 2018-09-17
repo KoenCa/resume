@@ -1,0 +1,72 @@
+@import '../../sass/libs/vars';
+@import '../../sass/libs/functions';
+@import '../../sass/libs/mixins';
+@import '../../sass/libs/vendor';
+@import '../../sass/libs/breakpoints';
+
+@include breakpoints((
+    xlarge:   ( 1281px,  1680px ),
+    large:    ( 1025px,  1280px ),
+    medium:   ( 737px,   1024px ),
+    small:    ( 481px,   736px  ),
+    xsmall:   ( null,    480px  ),
+));
+
+.footer {
+    @include vendor('flex-shrink', '0');
+    bottom: 0;
+    left: 0;
+    padding: 2em;
+    width: 100%;
+}
+
+.footerIcons {
+    margin: 0;
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+}
+
+.footerIcon {
+    display: inline-block;
+    padding: 0 1em 0 0;
+
+    &:last-child {
+        padding-right: 0 !important;
+    }
+
+    &:before {
+        font-size: 1.25em;
+    }
+
+    a {
+        &:hover {
+            color: _palette(header, fg-bold) !important;
+        }
+
+        color: _palette(header, fg-light) !important;
+    }
+}
+
+@include breakpoint('<=xlarge') {
+    .footer {
+        padding: 1.5em;
+    }
+}
+
+@include breakpoint('<=medium') {
+    .footer {
+        bottom: auto;
+        left: auto;
+        margin: 0.5em 0 0 0;
+        position: relative;
+        right: auto;
+        top: auto;
+    }
+}
+
+@include breakpoint('<=small') {
+    .footer {
+        padding: 1.5em;
+    }
+}
