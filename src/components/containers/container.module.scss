@@ -1,0 +1,64 @@
+@import '../../sass/libs/vars';
+@import '../../sass/libs/functions';
+@import '../../sass/libs/mixins';
+@import '../../sass/libs/vendor';
+@import '../../sass/libs/breakpoints';
+
+@include breakpoints((
+    xlarge:   ( 1281px,  1680px ),
+    large:    ( 1025px,  1280px ),
+    medium:   ( 737px,   1024px ),
+    small:    ( 481px,   736px  ),
+    xsmall:   ( null,    480px  ),
+));
+
+.container {
+    padding: 6em 0 4em 0;
+    margin: 0 auto;
+    max-width: calc(100% - #{_size(element-margin) * 2});
+    width: _size(container-width);
+
+    &.xsmall {
+        width: (_size(container-width) * 0.25);
+    }
+
+    &.small {
+        width: (_size(container-width) * 0.5);
+    }
+
+    &.medium {
+        width: (_size(container-width) * 0.75);
+    }
+
+    &.large {
+        width: (_size(container-width) * 1.25);
+    }
+
+    &.xlarge {
+        width: (_size(container-width) * 1.5);
+    }
+
+    &.max {
+        width: 100%;
+    }
+
+    @include breakpoint('<=medium') {
+        width: 100% !important;
+    }
+
+    @include breakpoint('<=xsmall') {
+        max-width: calc(100% - #{_size(element-margin) * 1.5});
+    }
+}
+
+@include breakpoint('<=xlarge') {
+    .container {
+        padding: 4em 0 2em 0;
+    }
+}
+
+@include breakpoint('<=small') {
+    .container {
+        padding: 2em 0 0 0;
+    }
+}

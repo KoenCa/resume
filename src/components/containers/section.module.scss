@@ -1,0 +1,21 @@
+@import '../../sass/libs/vars';
+@import '../../sass/libs/functions';
+@import '../../sass/libs/mixins';
+@import '../../sass/libs/vendor';
+@import '../../sass/libs/breakpoints';
+
+@include breakpoints((
+    xlarge:   ( 1281px,  1680px ),
+    large:    ( 1025px,  1280px ),
+    medium:   ( 737px,   1024px ),
+    small:    ( 481px,   736px  ),
+    xsmall:   ( null,    480px  ),
+));
+
+.section {
+    border-top: solid (_size(border-width) * 3) _palette(border);
+
+    &:first-child {
+        border-top: 0;
+    }
+}

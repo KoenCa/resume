@@ -1,0 +1,60 @@
+@import '../../sass/libs/vars';
+@import '../../sass/libs/functions';
+@import '../../sass/libs/mixins';
+@import '../../sass/libs/vendor';
+@import '../../sass/libs/breakpoints';
+
+@include breakpoints((
+    xlarge:   ( 1281px,  1680px ),
+    large:    ( 1025px,  1280px ),
+    medium:   ( 737px,   1024px ),
+    small:    ( 481px,   736px  ),
+    xsmall:   ( null,    480px  ),
+));
+
+.wrapper {
+	$size-header: 23em;
+
+    background: _palette(bg);
+
+    @if _misc(header-side) == 'right' {
+        padding-right: $size-header;
+    }
+    @else {
+        padding-left: $size-header;
+    }
+}
+
+@include breakpoint('<=xlarge') {
+    $size-header: 21em;
+
+    .wrapper {
+        @if _misc(header-side) == 'right' {
+            padding-right: $size-header;
+        }
+        @else {
+            padding-left: $size-header;
+        }
+    }
+}
+
+@include breakpoint('<=large') {
+    $size-header: 20em;
+
+    .wrapper {
+        @if _misc(header-side) == 'right' {
+            padding-right: $size-header;
+        }
+        @else {
+            padding-left: $size-header;
+        }
+    }
+}
+
+@include breakpoint('<=medium') {
+    .wrapper {
+        @include vendor('backface-visibility', 'hidden');
+        @include vendor('transition', 'transform #{_duration(header)} ease');
+        padding: 44px 0 1px 0;
+    }
+}
