@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import Sidebar from "src/components/sidebar/sidebar";
 import Wrapper from "src/components/containers/wrapper";
 import Section from "src/components/containers/section";
@@ -10,161 +10,201 @@ import pic03 from "../images/pic03.jpg";
 
 import Layout from "../components/layout";
 
-const sections = ["one", "two", "three"];
+export default class IndexPage extends Component {
+  constructor(props) {
+    super(props);
+    this.sections = [
+      {
+        id: "one",
+        title: "About"
+      },
+      {
+        id: "two",
+        title: "Things I can do"
+      },
+      {
+        id: "three",
+        title: "A few accomplishments"
+      },
+      {
+        id: "four",
+        title: "Contact"
+      }
+    ];
+    this.state = {
+      activeSection: this.sections[0].id
+    };
+  }
 
-const IndexPage = () => (
-  <Layout>
-    <Sidebar />
-    <Wrapper>
-      <Section id="one">
-        <div className="image main" data-position="center">
-          <img src={banner} alt="" />
-        </div>
-        <Container>
-          <header className="major">
-            <h2>Read Only</h2>
-            <p>
-              Just an incredibly simple responsive site
-              <br /> template freebie by{" "}
-              <a href="http://html5up.net">HTML5 UP</a>.
-            </p>
-          </header>
-          <p>
-            Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus
-            col. Commodo id in arcu ante lorem ipsum sed accumsan erat praesent
-            faucibus commodo ac mi lacus. Adipiscing mi ac commodo. Vis aliquet
-            tortor ultricies non ante erat nunc integer eu ante ornare amet
-            commetus vestibulum blandit integer in curae ac faucibus integer
-            non. Adipiscing cubilia elementum.
-          </p>
-        </Container>
-      </Section>
+  onSectionMoreVisible = sectionId => {
+    this.setState({ activeSection: sectionId });
+  };
 
-      <Section id="two">
-        <Container>
-          <h3>Things I Can Do</h3>
-          <p>
-            Integer eu ante ornare amet commetus vestibulum blandit integer in
-            curae ac faucibus integer non. Adipiscing cubilia elementum integer
-            lorem ipsum dolor sit amet.
-          </p>
-          <ul className="feature-icons">
-            <li className="fa-code">Write all the code</li>
-            <li className="fa-cubes">Stack small boxes</li>
-            <li className="fa-book">Read books and stuff</li>
-            <li className="fa-coffee">Drink much coffee</li>
-            <li className="fa-bolt">Lightning bolt</li>
-            <li className="fa-users">Shadow clone technique</li>
-          </ul>
-        </Container>
-      </Section>
-
-      <Section id="three">
-        <Container>
-          <h3>A Few Accomplishments</h3>
-          <p>
-            Integer eu ante ornare amet commetus vestibulum blandit integer in
-            curae ac faucibus integer non. Adipiscing cubilia elementum integer.
-            Integer eu ante ornare amet commetus.
-          </p>
-          <div className="features">
-            <article>
-              <a href="#" className="image">
-                <img src={pic01} alt="" />
-              </a>
-              <div className="inner">
-                <h4>Possibly broke spacetime</h4>
-                <p>
-                  Integer eu ante ornare amet commetus vestibulum blandit
-                  integer in curae ac faucibus integer adipiscing ornare amet.
-                </p>
-              </div>
-            </article>
-            <article>
-              <a href="#" className="image">
-                <img src={pic02} alt="" />
-              </a>
-              <div className="inner">
-                <h4>Terraformed a small moon</h4>
-                <p>
-                  Integer eu ante ornare amet commetus vestibulum blandit
-                  integer in curae ac faucibus integer adipiscing ornare amet.
-                </p>
-              </div>
-            </article>
-            <article>
-              <a href="#" className="image">
-                <img src={pic03} alt="" />
-              </a>
-              <div className="inner">
-                <h4>Snapped dark matter in the wild</h4>
-                <p>
-                  Integer eu ante ornare amet commetus vestibulum blandit
-                  integer in curae ac faucibus integer adipiscing ornare amet.
-                </p>
-              </div>
-            </article>
-          </div>
-        </Container>
-      </Section>
-
-      <Section id="four">
-        <Container>
-          <h3>Contact Me</h3>
-          <p>
-            Integer eu ante ornare amet commetus vestibulum blandit integer in
-            curae ac faucibus integer non. Adipiscing cubilia elementum integer.
-            Integer eu ante ornare amet commetus.
-          </p>
-          <form method="post" action="#">
-            <div className="row gtr-uniform">
-              <div className="col-6 col-12-xsmall">
-                <input type="text" name="name" id="name" placeholder="Name" />
-              </div>
-              <div className="col-6 col-12-xsmall">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Email"
-                />
-              </div>
-              <div className="col-12">
-                <input
-                  type="text"
-                  name="subject"
-                  id="subject"
-                  placeholder="Subject"
-                />
-              </div>
-              <div className="col-12">
-                <textarea
-                  name="message"
-                  id="message"
-                  placeholder="Message"
-                  rows="6"
-                />
-              </div>
-              <div className="col-12">
-                <ul className="actions">
-                  <li>
-                    <input
-                      type="submit"
-                      className="primary"
-                      value="Send Message"
-                    />
-                  </li>
-                  <li>
-                    <input type="reset" value="Reset Form" />
-                  </li>
-                </ul>
-              </div>
+  render() {
+    return (
+      <Layout>
+        <Sidebar
+          sections={this.sections}
+          activeSection={this.state.activeSection}
+        />
+        <Wrapper>
+          <Section id="one" onSectionMoreVisible={this.onSectionMoreVisible}>
+            <div className="image main" data-position="center">
+              <img src={banner} alt="" />
             </div>
-          </form>
-        </Container>
-      </Section>
+            <Container>
+              <header className="major">
+                <h2>Read Only</h2>
+                <p>
+                  Just an incredibly simple responsive site
+                  <br /> template freebie by{" "}
+                  <a href="http://html5up.net">HTML5 UP</a>.
+                </p>
+              </header>
+              <p>
+                Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus
+                col. Commodo id in arcu ante lorem ipsum sed accumsan erat
+                praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo.
+                Vis aliquet tortor ultricies non ante erat nunc integer eu ante
+                ornare amet commetus vestibulum blandit integer in curae ac
+                faucibus integer non. Adipiscing cubilia elementum.
+              </p>
+            </Container>
+          </Section>
 
-      <Section id="five">
+          <Section id="two" onSectionMoreVisible={this.onSectionMoreVisible}>
+            <Container>
+              <h3>Things I Can Do</h3>
+              <p>
+                Integer eu ante ornare amet commetus vestibulum blandit integer
+                in curae ac faucibus integer non. Adipiscing cubilia elementum
+                integer lorem ipsum dolor sit amet.
+              </p>
+              <ul className="feature-icons">
+                <li className="fa-code">Write all the code</li>
+                <li className="fa-cubes">Stack small boxes</li>
+                <li className="fa-book">Read books and stuff</li>
+                <li className="fa-coffee">Drink much coffee</li>
+                <li className="fa-bolt">Lightning bolt</li>
+                <li className="fa-users">Shadow clone technique</li>
+              </ul>
+            </Container>
+          </Section>
+
+          <Section id="three" onSectionMoreVisible={this.onSectionMoreVisible}>
+            <Container>
+              <h3>A Few Accomplishments</h3>
+              <p>
+                Integer eu ante ornare amet commetus vestibulum blandit integer
+                in curae ac faucibus integer non. Adipiscing cubilia elementum
+                integer. Integer eu ante ornare amet commetus.
+              </p>
+              <div className="features">
+                <article>
+                  <a href="#" className="image">
+                    <img src={pic01} alt="" />
+                  </a>
+                  <div className="inner">
+                    <h4>Possibly broke spacetime</h4>
+                    <p>
+                      Integer eu ante ornare amet commetus vestibulum blandit
+                      integer in curae ac faucibus integer adipiscing ornare
+                      amet.
+                    </p>
+                  </div>
+                </article>
+                <article>
+                  <a href="#" className="image">
+                    <img src={pic02} alt="" />
+                  </a>
+                  <div className="inner">
+                    <h4>Terraformed a small moon</h4>
+                    <p>
+                      Integer eu ante ornare amet commetus vestibulum blandit
+                      integer in curae ac faucibus integer adipiscing ornare
+                      amet.
+                    </p>
+                  </div>
+                </article>
+                <article>
+                  <a href="#" className="image">
+                    <img src={pic03} alt="" />
+                  </a>
+                  <div className="inner">
+                    <h4>Snapped dark matter in the wild</h4>
+                    <p>
+                      Integer eu ante ornare amet commetus vestibulum blandit
+                      integer in curae ac faucibus integer adipiscing ornare
+                      amet.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </Container>
+          </Section>
+
+          <Section id="four" onSectionMoreVisible={this.onSectionMoreVisible}>
+            <Container>
+              <h3>Contact Me</h3>
+              <p>
+                Integer eu ante ornare amet commetus vestibulum blandit integer
+                in curae ac faucibus integer non. Adipiscing cubilia elementum
+                integer. Integer eu ante ornare amet commetus.
+              </p>
+              <form method="post" action="#">
+                <div className="row gtr-uniform">
+                  <div className="col-6 col-12-xsmall">
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder="Name"
+                    />
+                  </div>
+                  <div className="col-6 col-12-xsmall">
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div className="col-12">
+                    <input
+                      type="text"
+                      name="subject"
+                      id="subject"
+                      placeholder="Subject"
+                    />
+                  </div>
+                  <div className="col-12">
+                    <textarea
+                      name="message"
+                      id="message"
+                      placeholder="Message"
+                      rows="6"
+                    />
+                  </div>
+                  <div className="col-12">
+                    <ul className="actions">
+                      <li>
+                        <input
+                          type="submit"
+                          className="primary"
+                          value="Send Message"
+                        />
+                      </li>
+                      <li>
+                        <input type="reset" value="Reset Form" />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </form>
+            </Container>
+          </Section>
+
+          {/* <Section id="five">
         <Container>
           <h3>Elements</h3>
 
@@ -681,20 +721,20 @@ const IndexPage = () => (
           faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac
           adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.
         </p>
-      </Section>
+      </Section> */}
 
-      <section id="footer">
-        <div className="container">
-          <ul className="copyright">
-            <li>&copy; Untitled. All rights reserved.</li>
-            <li>
-              Design: <a href="http://html5up.net">HTML5 UP</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </Wrapper>
-  </Layout>
-);
-
-export default IndexPage;
+          <section id="footer">
+            <div className="container">
+              <ul className="copyright">
+                <li>&copy; Untitled. All rights reserved.</li>
+                <li>
+                  Design: <a href="http://html5up.net">HTML5 UP</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </Wrapper>
+      </Layout>
+    );
+  }
+}

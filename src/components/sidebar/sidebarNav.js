@@ -1,41 +1,40 @@
 import React from "react";
 import styles from "./sidebarNav.module.scss";
 
-const SidebarNav = () => {
+const SidebarNavItem = ({ active, onClick, id, children }) => (
+  <li className={styles.navListItem}>
+    <a
+      href={`#${id}`}
+      data-target-id={id}
+      className={active ? styles.active : ""}
+      onClick={onClick}
+    >
+      {children}
+    </a>
+  </li>
+);
+
+const SidebarNav = ({ sections, activeSection }) => {
   const scrollToSection = e => {
     e.preventDefault();
     const sectionId = e.nativeEvent.srcElement.dataset.targetId;
+    if (!sectionId) return;
     document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <nav className={styles.nav}>
       <ul className={styles.navList}>
-        <li className={styles.navListItem}>
-          <a
-            data-target-id="one"
-            href="#one"
-            className={styles.active}
+        {sections.map(section => (
+          <SidebarNavItem
+            active={activeSection == section.id}
+            key={section.id}
             onClick={scrollToSection}
+            id={section.id}
           >
-            About
-          </a>
-        </li>
-        <li className={styles.navListItem}>
-          <a data-target-id="two" href="#two" onClick={scrollToSection}>
-            Things I can do
-          </a>
-        </li>
-        <li className={styles.navListItem}>
-          <a data-target-id="three" href="#three" onClick={scrollToSection}>
-            A few accomplishments
-          </a>
-        </li>
-        <li className={styles.navListItem}>
-          <a data-target-id="four" href="#four" onClick={scrollToSection}>
-            Contact
-          </a>
-        </li>
+            {section.title}
+          </SidebarNavItem>
+        ))}
       </ul>
     </nav>
   );

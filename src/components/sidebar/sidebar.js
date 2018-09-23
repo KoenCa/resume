@@ -4,10 +4,10 @@ import SidebarHeader from "./sidebarHeader";
 import SidebarNav from "./sidebarNav";
 import SidebarFooter from "./sidebarFooter";
 
-const Sidebar = () => (
+const Sidebar = ({ sections, activeSection }) => (
   <section className={styles.sidebar}>
     <SidebarHeader />
-    <SidebarNav />
+    <SidebarNav sections={sections} activeSection={activeSection} />
     <SidebarFooter />
   </section>
 );
