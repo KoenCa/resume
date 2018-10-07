@@ -1146,9 +1146,7 @@
 
 /* Medium */
 
-	#titleBar {
-		display: none;
-	}
+
 
 	@include breakpoint('<=medium') {
 
@@ -1180,81 +1178,6 @@
 			}
 
 		/* Header Panel */
-
-			#titleBar {
-				@include vendor('backface-visibility', 'hidden');
-				@include vendor('transition', 'transform #{_duration(header)} ease');
-				display: block;
-				height: 44px;
-				left: 0;
-				position: fixed;
-				top: 0;
-				width: 100%;
-				z-index: _misc(z-index-base) + 1;
-				background: #222;
-				color: #fff;
-				min-width: 320px;
-
-				.title {
-					color: #fff;
-					display: block;
-					font-weight: _font(weight-bold);
-					height: 44px;
-					line-height: 44px;
-					padding: 0 1em;
-					width: 100%;
-
-					@if _misc(header-side) == 'right' {
-						text-align: left;
-					}
-					@else {
-						text-align: right;
-					}
-
-					a {
-						border: 0;
-						text-decoration: none;
-					}
-				}
-
-				.toggle {
-					@include icon;
-					height: 4em;
-					position: absolute;
-					top: 0;
-					width: 6em;
-					border: 0;
-					outline: 0;
-
-					@if _misc(header-side) == 'right' {
-						right: 0;
-					}
-					@else {
-						left: 0;
-					}
-
-					&:before {
-						background: _palette(accent1, bg);
-						color: _palette(accent1, fg-bold);
-						content: '\f0c9';
-						display: block;
-						font-size: 18px;
-						height: 44px;
-						line-height: 44px;
-						position: absolute;
-						text-align: center;
-						top: 0;
-						width: 64px;
-
-						@if _misc(header-side) == 'right' {
-							right: 0;
-						}
-						@else {
-							left: 0;
-						}
-					}
-				}
-			}
 
 			body {
 				&.header-visible {
@@ -1378,18 +1301,6 @@
 			}
 
 		/* Header Panel */
-
-			#titleBar {
-				.toggle {
-					height: 4em;
-					width: 6em;
-
-					&:before {
-						font-size: 14px;
-						width: 44px;
-					}
-				}
-			}
 
 			body {
 				&.header-visible {

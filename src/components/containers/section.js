@@ -8,13 +8,18 @@ export default class Section extends Component {
     this.state = {
       prevRatio: 0
     };
+
+    this.observer = new IntersectionObserver(this.onIntersectionChange, {
+      threshold: [0.25, 0.5, 0.75, 1]
+    });
   }
 
   componentDidMount() {
-    const observer = new IntersectionObserver(this.onIntersectionChange, {
-      threshold: [0.25, 0.5, 0.75, 1]
-    });
-    observer.observe(this.sectionRef.current);
+    this.observer.observe(this.sectionRef.current);
+  }
+
+  componentWillUnmount() {
+    this.observer.unobserve(this.sectionRef.current);
   }
 
   onIntersectionChange = entries => {

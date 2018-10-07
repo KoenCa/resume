@@ -73,6 +73,10 @@ $size-header: 23em;
             left: 0;
         }
     }
+
+    .showSidebar {
+        @include vendor('transform', 'translateX(0)');
+    }
 }
 
 @include breakpoint('<=small') {
@@ -90,5 +94,9 @@ $size-header: 23em;
             @include vendor('transform', 'translateX(#{$size-header * -1})');
             left: 0;
         }
+    }
+
+    .showSidebar {
+        @include vendor('transform', 'translateX(0)');
     }
 }

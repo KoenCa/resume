@@ -1,15 +1,44 @@
-import React from "react";
+import React, { Component } from "react";
 import styles from "./sidebar.module.scss";
+import TitleBar from "./titlebar";
 import SidebarHeader from "./sidebarHeader";
 import SidebarNav from "./sidebarNav";
 import SidebarFooter from "./sidebarFooter";
 
-const Sidebar = ({ sections, activeSection }) => (
-  <section className={styles.sidebar}>
-    <SidebarHeader />
-    <SidebarNav sections={sections} activeSection={activeSection} />
-    <SidebarFooter />
-  </section>
-);
+class Sidebar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      sidebarVisible: false // Only used on mobile
+    };
+  }
+
+  onToggleClick = event => {
+    event.preventDefault();
+    this.setState({ sidebarVisible: !this.state.sidebarVisible });
+  };
+
+  render() {
+    let sidebarStyles = styles.sidebar;
+    if (this.state.sidebarVisible) sidebarStyles += ` ${styles.showSidebar}`;
+
+    return (
+      <>
+        <TitleBar
+          onToggleClick={this.onToggleClick}
+          sidebarVisible={this.state.sidebarVisible}
+        />
+        <section className={sidebarStyles}>
+          <SidebarHeader />
+          <SidebarNav
+            sections={this.props.sections}
+            activeSection={this.props.activeSection}
+          />
+          <SidebarFooter />
+        </section>
+      </>
+    );
+  }
+}
 
 export default Sidebar;

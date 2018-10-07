@@ -1,0 +1,107 @@
+@import '../../sass/libs/vars';
+@import '../../sass/libs/functions';
+@import '../../sass/libs/mixins';
+@import '../../sass/libs/vendor';
+@import '../../sass/libs/breakpoints';
+
+@include breakpoints((
+    xlarge:   ( 1281px,  1680px ),
+    large:    ( 1025px,  1280px ),
+    medium:   ( 737px,   1024px ),
+    small:    ( 481px,   736px  ),
+    xsmall:   ( null,    480px  ),
+));
+
+.titleBar {
+    display: none;
+}
+
+@include breakpoint('<=medium') {
+    .titleBar {
+        @include vendor('backface-visibility', 'hidden');
+        @include vendor('transition', 'transform #{_duration(header)} ease');
+        display: block;
+        height: 44px;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: _misc(z-index-base) + 1;
+        background: #222;
+        color: #fff;
+        min-width: 320px;
+    }
+
+    .title {
+        color: #fff;
+        display: block;
+        font-weight: _font(weight-bold);
+        height: 44px;
+        line-height: 44px;
+        padding: 0 1em;
+        width: 100%;
+
+        @if _misc(header-side) == 'right' {
+            text-align: left;
+        }
+        @else {
+            text-align: right;
+        }
+
+        a {
+            border: 0;
+            text-decoration: none;
+        }
+    }
+
+    .toggle {
+        position: absolute;
+        padding: 0.2em 1em 1em 1em;
+        top: 0;
+        border: 0;
+        outline: 0;
+
+        @if _misc(header-side) == 'right' {
+            right: 0;
+        }
+        @else {
+            left: 0;
+        }
+    }
+
+    .icon {
+        position: relative;
+
+        &, // first line
+        &::before, // second line
+        &::after { // third line
+            width: 2.5em;
+            height: 2px;
+            background-color: _palette(accent1, fg-bold);
+            display: inline-block;
+
+            @if _misc(header-side) == 'right' {
+                right: 0;
+            }
+            @else {
+                left: 0;
+            }
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::before {
+            top: -.7em;
+        }
+
+        &::after {
+            top: .7em;
+        }
+    }
+}
