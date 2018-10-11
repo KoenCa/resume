@@ -1176,26 +1176,6 @@
 					height: 20em;
 				}
 			}
-
-		/* Header Panel */
-
-			body {
-				&.header-visible {
-					#wrapper, #titleBar {
-						@if _misc(header-side) == 'right' {
-							@include vendor('transform', 'translateX(#{$size-header * -1})');
-						}
-						@else {
-							@include vendor('transform', 'translateX(#{$size-header})');
-						}
-					}
-
-					#header {
-						@include vendor('transform', 'translateX(0)');
-					}
-				}
-			}
-
 	}
 
 /* Small */
@@ -1299,22 +1279,6 @@
 					}
 				}
 			}
-
-		/* Header Panel */
-
-			body {
-				&.header-visible {
-					#wrapper, #titleBar {
-						@if _misc(header-side) == 'right' {
-							@include vendor('transform', 'translateX(#{$size-header * -1})');
-						}
-						@else {
-							@include vendor('transform', 'translateX(#{$size-header})');
-						}
-					}
-				}
-			}
-
 	}
 
 /* XSmall */

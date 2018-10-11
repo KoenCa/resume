@@ -17,6 +17,8 @@
 }
 
 @include breakpoint('<=medium') {
+    $size-header: 23em;
+
     .titleBar {
         @include vendor('backface-visibility', 'hidden');
         @include vendor('transition', 'transform #{_duration(header)} ease');
@@ -30,6 +32,15 @@
         background: #222;
         color: #fff;
         min-width: 320px;
+    }
+
+    .mobileTitlebar {
+        @if _misc(header-side) == 'right' {
+            @include vendor('transform', 'translateX(#{$size-header * -1})');
+        }
+        @else {
+            @include vendor('transform', 'translateX(#{$size-header})');
+        }
     }
 
     .title {
@@ -102,6 +113,19 @@
 
         &::after {
             top: .7em;
+        }
+    }
+}
+
+@include breakpoint('<=small') {
+    $size-header: 17em;
+
+    .mobileTitlebar {
+        @if _misc(header-side) == 'right' {
+            @include vendor('transform', 'translateX(#{$size-header * -1})');
+        }
+        @else {
+            @include vendor('transform', 'translateX(#{$size-header})');
         }
     }
 }

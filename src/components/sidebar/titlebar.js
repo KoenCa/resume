@@ -3,9 +3,10 @@ import styles from "./titleBar.module.scss";
 
 const Sidebar = ({ onToggleClick, sidebarVisible }) => {
   let titleBarStyles = styles.titleBar;
+  if (sidebarVisible) titleBarStyles += ` ${styles.mobileTitlebar}`;
 
   return (
-    <div className={styles.titleBar}>
+    <div className={titleBarStyles}>
       <a href="#" className={styles.toggle} onClick={onToggleClick}>
         <span className={styles.icon} />
       </a>
