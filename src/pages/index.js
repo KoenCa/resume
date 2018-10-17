@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Sidebar from "src/components/sidebar/sidebar";
-import Wrapper from "src/components/containers/wrapper";
-import Section from "src/components/containers/section";
-import Container from "src/components/containers/container";
+import Sidebar from "../components/sidebar/sidebar";
+import Wrapper from "../components/containers/wrapper";
+import Section from "../components/containers/section";
+import Container from "../components/containers/container";
 import banner from "../images/banner.jpg";
 import pic01 from "../images/pic01.jpg";
 import pic02 from "../images/pic02.jpg";
