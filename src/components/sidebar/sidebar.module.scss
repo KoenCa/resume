@@ -52,6 +52,7 @@ $size-header: 23em;
 }
 
 @include breakpoint('<=medium') {
+    $size-header: 20em;
 
     .sidebar {
         @include vendor('backface-visibility', 'hidden');

@@ -32,12 +32,17 @@ export default class IndexPage extends Component {
       }
     ];
     this.state = {
-      activeSection: this.sections[0].id
+      activeSection: this.sections[0].id,
+      moveBodyForSidebar: false
     };
   }
 
   onSectionMoreVisible = sectionId => {
     this.setState({ activeSection: sectionId });
+  };
+
+  moveBodyForSidebar = () => {
+    this.setState({ moveBodyForSidebar: !this.state.moveBodyForSidebar });
   };
 
   render() {
@@ -46,8 +51,9 @@ export default class IndexPage extends Component {
         <Sidebar
           sections={this.sections}
           activeSection={this.state.activeSection}
+          moveBodyForSidebar={this.moveBodyForSidebar}
         />
-        <Wrapper>
+        <Wrapper moveForSidebar={this.state.moveBodyForSidebar}>
           <Section id="one" onSectionMoreVisible={this.onSectionMoreVisible}>
             <div className="image main" data-position="center">
               <img src={banner} alt="" />

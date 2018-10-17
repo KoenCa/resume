@@ -52,9 +52,35 @@
 }
 
 @include breakpoint('<=medium') {
+    $size-header: 20em;
+
     .wrapper {
         @include vendor('backface-visibility', 'hidden');
         @include vendor('transition', 'transform #{_duration(header)} ease');
         padding: 44px 0 1px 0;
+    }
+
+    // Used to move page when sidebar is shown on mobile
+    .mobileWrapper {
+        @if _misc(header-side) == 'right' {
+            @include vendor('transform', 'translateX(#{$size-header * -1})');
+        }
+        @else {
+            @include vendor('transform', 'translateX(#{$size-header})');
+        }
+    }
+}
+
+@include breakpoint('<=small') {
+    $size-header: 17em;
+
+    // Used to move page when sidebar is shown on mobile
+    .mobileWrapper {
+        @if _misc(header-side) == 'right' {
+            @include vendor('transform', 'translateX(#{$size-header * -1})');
+        }
+        @else {
+            @include vendor('transform', 'translateX(#{$size-header})');
+        }
     }
 }

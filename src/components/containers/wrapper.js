@@ -1,6 +1,11 @@
 import React from "react";
 import styles from "./wrapper.module.scss";
 
-const Main = ({ children }) => <div className={styles.wrapper}>{children}</div>;
+const Wrapper = ({ children, moveForSidebar }) => {
+  let wrapperStyles = styles.wrapper;
+  if (moveForSidebar) wrapperStyles += ` ${styles.mobileWrapper}`;
 
-export default Main;
+  return <div className={wrapperStyles}>{children}</div>;
+};
+
+export default Wrapper;

@@ -16,6 +16,7 @@ class Sidebar extends Component {
   onToggleClick = event => {
     event.preventDefault();
     this.setState({ sidebarVisible: !this.state.sidebarVisible });
+    this.props.moveBodyForSidebar();
   };
 
   render() {
