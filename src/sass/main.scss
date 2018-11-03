@@ -282,14 +282,6 @@
 		}
 	}
 
-/* Section/Article */
-
-	section, article {
-		&.special {
-			text-align: center;
-		}
-	}
-
 /* Form */
 
 	form {
@@ -1176,24 +1168,6 @@
 
 				&.main {
 					height: 12em;
-				}
-			}
-
-		/* Section/Article */
-
-			header {
-				br {
-					display: none;
-				}
-
-				&.major {
-					h2 {
-						font-size: 2.5em;
-
-						& + p {
-							font-size: 1.5em;
-						}
-					}
 				}
 			}
 

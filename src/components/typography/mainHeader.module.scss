@@ -1,5 +1,6 @@
 @import '../../sass/libs/vars';
 @import '../../sass/libs/functions';
+@import '../../sass/main_breakpoints';
 
 .h2 {
     color: _palette(accent1, bg);
@@ -11,4 +12,14 @@
     font-size: 1.75em;
     font-weight: _font(weight-bold);
     margin-top: -0.75em;
+}
+
+@include breakpoint('<=small') {
+    .h2 {
+        font-size: 2.5em;
+    }
+
+    .p {
+        font-size: 1.5em;
+    }
 }
