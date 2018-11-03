@@ -1,0 +1,10 @@
+@import '../../sass/libs/vars';
+@import '../../sass/libs/functions';
+
+.label {
+    color: _palette(fg-bold);
+    display: block;
+    font-size: 0.9em;
+    font-weight: _font(weight-bold);
+    margin: 0 0 (_size(element-margin) * 0.5) 0;
+}

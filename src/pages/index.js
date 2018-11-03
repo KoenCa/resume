@@ -4,7 +4,9 @@ import Wrapper from "../components/containers/wrapper";
 import Section from "../components/containers/section";
 import Container from "../components/containers/container";
 import MainHeader from "../components/typography/mainHeader";
-import HeaderSubtitle from "../components/typography/headerSubtitle";
+import Form from "../components/form/form";
+import Label from "../components/form/label";
+import Input from "../components/form/input";
 import banner from "../images/banner.jpg";
 import pic01 from "../images/pic01.jpg";
 import pic02 from "../images/pic02.jpg";
@@ -152,33 +154,43 @@ export default class IndexPage extends Component {
                 in curae ac faucibus integer non. Adipiscing cubilia elementum
                 integer. Integer eu ante ornare amet commetus.
               </p>
-              <form method="post" action="#">
+              <Form>
                 <div className="row gtr-uniform">
-                  <div className="col-6 col-12-xsmall">
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      placeholder="Name"
-                    />
-                  </div>
-                  <div className="col-6 col-12-xsmall">
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      placeholder="Email"
+                  <div className="col-12">
+                    <Label>Name</Label>
+                    <Input
+                      defaults={{
+                        type: "text",
+                        name: "name",
+                        id: "name",
+                        placeholder: "Name"
+                      }}
                     />
                   </div>
                   <div className="col-12">
-                    <input
-                      type="text"
-                      name="subject"
-                      id="subject"
-                      placeholder="Subject"
+                    <Label>Email</Label>
+                    <Input
+                      defaults={{
+                        type: "email",
+                        name: "email",
+                        id: "email",
+                        placeholder: "Email"
+                      }}
                     />
                   </div>
                   <div className="col-12">
+                    <Label>Subject</Label>
+                    <Input
+                      defaults={{
+                        type: "text",
+                        name: "subject",
+                        id: "subject",
+                        placeholder: "Subject"
+                      }}
+                    />
+                  </div>
+                  <div className="col-12">
+                    <Label>Message</Label>
                     <textarea
                       name="message"
                       id="message"
@@ -201,7 +213,7 @@ export default class IndexPage extends Component {
                     </ul>
                   </div>
                 </div>
-              </form>
+              </Form>
             </Container>
           </Section>
 
