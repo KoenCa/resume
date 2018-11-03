@@ -3,6 +3,7 @@ import Sidebar from "../components/sidebar/sidebar";
 import Wrapper from "../components/containers/wrapper";
 import Section from "../components/containers/section";
 import Container from "../components/containers/container";
+import MainHeader from "../components/typography/mainHeader";
 import banner from "../images/banner.jpg";
 import pic01 from "../images/pic01.jpg";
 import pic02 from "../images/pic02.jpg";
@@ -59,14 +60,7 @@ export default class IndexPage extends Component {
               <img src={banner} alt="" />
             </div>
             <Container>
-              <header className="major">
-                <h2>Read Only</h2>
-                <p>
-                  Just an incredibly simple responsive site
-                  <br /> template freebie by{" "}
-                  <a href="http://html5up.net">HTML5 UP</a>.
-                </p>
-              </header>
+              <MainHeader />
               <p>
                 Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus
                 col. Commodo id in arcu ante lorem ipsum sed accumsan erat
@@ -75,6 +69,11 @@ export default class IndexPage extends Component {
                 ornare amet commetus vestibulum blandit integer in curae ac
                 faucibus integer non. Adipiscing cubilia elementum.
               </p>
+
+              <header>
+                <h2>Heading with a Subtitle</h2>
+                <p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+              </header>
             </Container>
           </Section>
 

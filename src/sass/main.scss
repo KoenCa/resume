@@ -316,23 +316,6 @@
 			margin-top: -0.25em;
 			line-height: 1.5em;
 		}
-
-		&.major {
-			h2 {
-				color: _palette(accent1, bg);
-				font-size: 3.5em;
-
-				& + p {
-					color: _palette(fg-bold);
-					font-size: 1.75em;
-					font-weight: _font(weight-bold);
-					margin-top: -0.75em;
-				}
-			}
-		}
-	}
-
-	footer {
 	}
 
 /* Form */
