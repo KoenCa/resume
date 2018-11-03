@@ -4,6 +4,7 @@ import Wrapper from "../components/containers/wrapper";
 import Section from "../components/containers/section";
 import Container from "../components/containers/container";
 import MainHeader from "../components/typography/mainHeader";
+import HeaderSubtitle from "../components/typography/headerSubtitle";
 import banner from "../images/banner.jpg";
 import pic01 from "../images/pic01.jpg";
 import pic02 from "../images/pic02.jpg";
@@ -69,11 +70,6 @@ export default class IndexPage extends Component {
                 ornare amet commetus vestibulum blandit integer in curae ac
                 faucibus integer non. Adipiscing cubilia elementum.
               </p>
-
-              <header>
-                <h2>Heading with a Subtitle</h2>
-                <p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-              </header>
             </Container>
           </Section>
 

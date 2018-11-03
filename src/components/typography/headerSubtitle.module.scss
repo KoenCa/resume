@@ -1,0 +1,26 @@
+@import '../../sass/libs/vars';
+@import '../../sass/libs/functions';
+
+.p {
+    color: _palette(fg-light);
+    position: relative;
+    margin: 0 0 (_size(element-margin) * 0.75) 0;
+}
+
+.p2 {
+    font-size: 1.25em;
+    margin-top: -0.5em;
+    line-height: 1.5em;
+}
+
+.p3 {
+    font-size: 1.1em;
+    margin-top: -0.35em;
+    line-height: 1.5em;
+}
+
+.p4, .p5, .p6 {
+    font-size: 0.9em;
+    margin-top: -0.25em;
+    line-height: 1.5em;
+}
