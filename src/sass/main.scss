@@ -83,7 +83,7 @@
 		color: inherit;
 	}
 
-	select, textarea {
+	select {
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		-ms-appearance: none;
@@ -115,7 +115,7 @@
 
 	}
 
-	body, select, textarea {
+	body, select {
 		color: _palette(fg);
 		font-family: _font(family);
 		font-size: 16pt;
@@ -278,8 +278,7 @@
 	}
 
 /* Form */
-	select,
-	textarea {
+	select {
 		@include vendor('appearance', 'none');
 		border-radius: _size(border-radius);
 		border: none;
@@ -328,12 +327,6 @@
 	select {
 		height: _size(element-height);
 	}
-
-	textarea {
-		padding: 0.75em 1em;
-	}
-
-
 
 /* Box */
 
@@ -851,14 +844,14 @@
 
 /* XLarge */
 	@include breakpoint('<=xlarge') {
-			body, select, textarea {
+			body, select {
 				font-size: 13pt;
 			}
 	}
 
 /* Large */
 	@include breakpoint('<=large') {
-			body, select, textarea {
+			body, select {
 				font-size: 11pt;
 			}
 
@@ -870,7 +863,7 @@
 				overflow-x: hidden;
 			}
 
-			body, select, textarea {
+			body, select {
 				font-size: 12pt;
 			}
 
@@ -900,7 +893,7 @@
 
 		/* Basic */
 
-			body, select, textarea {
+			body, select {
 				font-size: 12pt;
 			}
 
@@ -987,7 +980,7 @@
 				min-width: 320px;
 			}
 
-			body, select, textarea {
+			body, select {
 				font-size: 12pt;
 			}
 
