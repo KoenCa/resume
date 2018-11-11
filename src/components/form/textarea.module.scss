@@ -34,31 +34,31 @@
 }
 
 @include breakpoint('<=xlarge') {
-    .input {
+    .textarea {
         font-size: 13pt;
     }
 }
 
 @include breakpoint('<=large') {
-    .input {
+    .textarea {
         font-size: 11pt;
     }
 }
 
 @include breakpoint('<=medium') {
-    .input {
+    .textarea {
         font-size: 12pt;
     }
 }
 
 @include breakpoint('<=small') {
-    .input {
+    .textarea {
         font-size: 12pt;
     }
 }
 
 @include breakpoint('<=xsmall') {
-    .input {
+    .textarea {
         font-size: 12pt;
     }
 }
