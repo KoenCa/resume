@@ -159,7 +159,7 @@ export default class IndexPage extends Component {
               <Form>
                 <div className="row gtr-uniform">
                   <div className="col-12">
-                    <Label>Name</Label>
+                    <Label defaults={{ for: "name" }}>Name</Label>
                     <Input
                       defaults={{
                         type: "text",
@@ -170,7 +170,7 @@ export default class IndexPage extends Component {
                     />
                   </div>
                   <div className="col-12">
-                    <Label>Email</Label>
+                    <Label defaults={{ for: "email" }}>Email</Label>
                     <Input
                       defaults={{
                         type: "email",
@@ -181,7 +181,7 @@ export default class IndexPage extends Component {
                     />
                   </div>
                   <div className="col-12">
-                    <Label>Subject</Label>
+                    <Label defaults={{ for: "subject" }}>Subject</Label>
                     <Input
                       defaults={{
                         type: "text",
@@ -192,7 +192,7 @@ export default class IndexPage extends Component {
                     />
                   </div>
                   <div className="col-12">
-                    <Label>Message</Label>
+                    <Label defaults={{ for: "message" }}>Message</Label>
                     <textarea
                       name="message"
                       id="message"
