@@ -1,0 +1,32 @@
+@import '../../sass/libs/vars';
+@import '../../sass/libs/functions';
+@import '../../sass/libs/vendor';
+
+.generalInput {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    color: _palette(fg);
+    font-family: _font(family);
+    font-size: 16pt;
+    font-weight: _font(weight);
+    line-height: 1.75em;
+    @include vendor('appearance', 'none');
+    border-radius: _size(border-radius);
+    border: none;
+    border: solid _size(border-width) _palette(border2);
+    color: inherit;
+    display: block;
+    outline: 0;
+    text-decoration: none;
+    width: 100%;
+
+    &:invalid {
+        box-shadow: none;
+    }
+
+    &:focus {
+        border-color: _palette(accent1, bg);
+    }
+}
