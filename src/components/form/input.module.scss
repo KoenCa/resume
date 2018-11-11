@@ -1,12 +1,24 @@
 @import '../../sass/libs/vars';
 @import '../../sass/libs/functions';
 @import '../../sass/libs/vendor';
+@import '../../sass/_main_breakpoints';
+
+.input {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    color: _palette(fg);
+    font-family: _font(family);
+    font-size: 16pt;
+    font-weight: _font(weight);
+    line-height: 1.75em;
+}
 
 .input::-moz-focus-inner {
     border: 0;
     padding: 0;
 }
-
 
 .input[type="text"],
 .input[type="password"],
@@ -122,4 +134,34 @@
     color: _palette(fg-light) !important;
     font-style: italic;
     opacity: 1.0;
+}
+
+@include breakpoint('<=xlarge') {
+    .input {
+        font-size: 13pt;
+    }
+}
+
+@include breakpoint('<=large') {
+    .input {
+        font-size: 11pt;
+    }
+}
+
+@include breakpoint('<=medium') {
+    .input {
+        font-size: 12pt;
+    }
+}
+
+@include breakpoint('<=small') {
+    .input {
+        font-size: 12pt;
+    }
+}
+
+@include breakpoint('<=xsmall') {
+    .input {
+        font-size: 12pt;
+    }
 }
