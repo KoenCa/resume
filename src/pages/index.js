@@ -7,6 +7,7 @@ import MainHeader from "../components/typography/mainHeader";
 import Form from "../components/form/form";
 import Label from "../components/form/label";
 import Input from "../components/form/input";
+import InputButton from "../components/form/inputButton";
 import banner from "../images/banner.jpg";
 import pic01 from "../images/pic01.jpg";
 import pic02 from "../images/pic02.jpg";
@@ -201,14 +202,22 @@ export default class IndexPage extends Component {
                   <div className="col-12">
                     <ul className="actions">
                       <li>
-                        <input
-                          type="submit"
-                          className="primary"
-                          value="Send Message"
+                        <InputButton
+                          defaults={{
+                            type: "submit",
+                            value: "Send Message"
+                          }}
+                          primary
+                          fit
                         />
                       </li>
                       <li>
-                        <input type="reset" value="Reset Form" />
+                        <InputButton
+                          defaults={{
+                            type: "reset",
+                            value: "Reset Form"
+                          }}
+                        />
                       </li>
                     </ul>
                   </div>

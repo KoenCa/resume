@@ -83,12 +83,7 @@
 		color: inherit;
 	}
 
-	input::-moz-focus-inner {
-		border: 0;
-		padding: 0;
-	}
-
-	input, select, textarea {
+	select, textarea {
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		-ms-appearance: none;
@@ -120,7 +115,7 @@
 
 	}
 
-	body, input, select, textarea {
+	body, select, textarea {
 		color: _palette(fg);
 		font-family: _font(family);
 		font-size: 16pt;
@@ -789,10 +784,6 @@
 	}
 
 /* Button */
-
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
 	.button {
 		@include vendor('appearance', 'none');
 		@include vendor('transition', ('background-color #{_duration(transition)} ease-in-out', 'color #{_duration(transition)} ease-in-out'));
@@ -955,40 +946,27 @@
 	}
 
 /* XLarge */
-
 	@include breakpoint('<=xlarge') {
-		/* Basic */
-
-			body, input, select, textarea {
+			body, select, textarea {
 				font-size: 13pt;
 			}
 	}
 
 /* Large */
-
 	@include breakpoint('<=large') {
-
-		/* Basic */
-
-			body, input, select, textarea {
+			body, select, textarea {
 				font-size: 11pt;
 			}
 
 	}
 
 /* Medium */
-
-
-
 	@include breakpoint('<=medium') {
-
-		/* Basic */
-
 			html, body {
 				overflow-x: hidden;
 			}
 
-			body, input, select, textarea {
+			body, select, textarea {
 				font-size: 12pt;
 			}
 
@@ -1018,7 +996,7 @@
 
 		/* Basic */
 
-			body, input, select, textarea {
+			body, select, textarea {
 				font-size: 12pt;
 			}
 
@@ -1105,7 +1083,7 @@
 				min-width: 320px;
 			}
 
-			body, input, select, textarea {
+			body, select, textarea {
 				font-size: 12pt;
 			}
 
@@ -1157,10 +1135,6 @@
 			}
 
 		/* Button */
-
-			input[type="submit"],
-			input[type="reset"],
-			input[type="button"],
 			.button {
 				padding: 0;
 			}
