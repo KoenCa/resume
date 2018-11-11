@@ -54,14 +54,6 @@
     }
 }
 
-.buttonIcon {
-    padding-left: 1.35em;
-
-    &:before {
-        margin-right: 0.5em;
-    }
-}
-
 .buttonFit {
     width: 100%;
 }
@@ -70,31 +62,9 @@
     font-size: 0.8em;
 }
 
-.butonLarge {
+.buttonLarge {
     font-size: 1.35em;
 }
-
-.buttonAlt {
-    background-color: transparent;
-    box-shadow: inset 0 0 0 _size(border-width) _palette(border2);
-    color: _palette(fg-bold) !important;
-
-    &:hover {
-        background-color: _palette(border2-bg);
-        color: _palette(fg-bold) !important;
-    }
-
-    &:active {
-        background-color: _palette(border3-bg);
-    }
-}
-
-.buttonAltIcon {
-    &:before {
-        color: _palette(fg-light);
-    }
-}
-
 
 @include breakpoint('<=xlarge') {
     .button {
