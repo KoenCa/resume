@@ -10,6 +10,7 @@ import Input from "../components/form/input";
 import InputButton from "../components/form/inputButton";
 import ActionsBox from "../components/form/actionsBox";
 import Textarea from "../components/form/textarea";
+import Select from "../components/form/select";
 import banner from "../images/banner.jpg";
 import pic01 from "../images/pic01.jpg";
 import pic02 from "../images/pic02.jpg";
@@ -160,7 +161,7 @@ export default class IndexPage extends Component {
               <Form>
                 <div className="row gtr-uniform">
                   <div className="col-12">
-                    <Label defaults={{ for: "name" }}>Name</Label>
+                    <Label defaults={{ htmlFor: "name" }}>Name</Label>
                     <Input
                       defaults={{
                         type: "text",
@@ -171,7 +172,7 @@ export default class IndexPage extends Component {
                     />
                   </div>
                   <div className="col-12">
-                    <Label defaults={{ for: "email" }}>Email</Label>
+                    <Label defaults={{ htmlFor: "email" }}>Email</Label>
                     <Input
                       defaults={{
                         type: "email",
@@ -182,7 +183,7 @@ export default class IndexPage extends Component {
                     />
                   </div>
                   <div className="col-12">
-                    <Label defaults={{ for: "subject" }}>Subject</Label>
+                    <Label defaults={{ htmlFor: "subject" }}>Subject</Label>
                     <Input
                       defaults={{
                         type: "text",
@@ -193,7 +194,7 @@ export default class IndexPage extends Component {
                     />
                   </div>
                   <div className="col-12">
-                    <Label defaults={{ for: "message" }}>Message</Label>
+                    <Label defaults={{ htmlFor: "message" }}>Message</Label>
                     <Textarea
                       defaults={{
                         name: "message",
@@ -202,6 +203,20 @@ export default class IndexPage extends Component {
                         rows: "6"
                       }}
                     />
+                  </div>
+                  <div className="col-12">
+                    <Label defaults={{ htmlFor: "select" }}>Select:</Label>
+                    <Select
+                      defaults={{
+                        name: "select",
+                        id: "select",
+                        placeholder: "Select"
+                      }}
+                    >
+                      <option>test1</option>
+                      <option>test2</option>
+                      <option>test3</option>
+                    </Select>
                   </div>
                   <div className="col-12">
                     <ActionsBox>
