@@ -167,7 +167,8 @@ export default class IndexPage extends Component {
                         type: "text",
                         name: "name",
                         id: "name",
-                        placeholder: "Name"
+                        placeholder: "Name",
+                        required: true
                       }}
                     />
                   </div>
@@ -178,7 +179,8 @@ export default class IndexPage extends Component {
                         type: "email",
                         name: "email",
                         id: "email",
-                        placeholder: "Email"
+                        placeholder: "Email",
+                        required: true
                       }}
                     />
                   </div>
@@ -189,7 +191,8 @@ export default class IndexPage extends Component {
                         type: "text",
                         name: "subject",
                         id: "subject",
-                        placeholder: "Subject"
+                        placeholder: "Subject",
+                        required: true
                       }}
                     />
                   </div>
@@ -200,7 +203,8 @@ export default class IndexPage extends Component {
                         name: "message",
                         id: "message",
                         placeholder: "Message",
-                        rows: "6"
+                        rows: "6",
+                        required: true
                       }}
                     />
                   </div>

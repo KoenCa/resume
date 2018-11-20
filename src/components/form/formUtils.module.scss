@@ -22,11 +22,16 @@
     text-decoration: none;
     width: 100%;
 
-    &:invalid {
-        box-shadow: none;
-    }
-
     &:focus {
         border-color: _palette(accent1, bg);
+    }
+}
+
+.generalInputInvalid {
+    border-color: #ff7d7d;
+    background-color: #fdeeee;
+
+    &:focus {
+        border-color: #ff7d7d;
     }
 }

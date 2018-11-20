@@ -1,8 +1,21 @@
 import React from "react";
+import validation from "./validation";
 import styles from "./textarea.module.scss";
+import generalStyles from "./formUtils.module.scss";
 
-const Textarea = ({ defaults }) => (
-  <textarea {...defaults} className={styles.textarea} />
-);
+const Textarea = ({ defaults, invalid, onInput, onBlur, onInvalid }) => {
+  let styling = styles.textarea;
+  if (invalid) styling += ` ${generalStyles.generalInputInvalid}`;
 
-export default Textarea;
+  return (
+    <textarea
+      {...defaults}
+      className={styling}
+      onInput={onInput}
+      onBlur={onBlur}
+      onInvalid={onInvalid}
+    />
+  );
+};
+
+export default validation(Textarea);
