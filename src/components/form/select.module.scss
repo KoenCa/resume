@@ -31,14 +31,6 @@
     &::-ms-expand {
         display: none;
     }
-
-    &:invalid {
-        box-shadow: none;
-    }
-
-    &:focus {
-        border-color: _palette(accent1, bg);
-    }
 }
 
 @include breakpoint('<=xlarge') {

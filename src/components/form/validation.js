@@ -23,17 +23,33 @@ const validation = WrappedFormElement => {
     };
 
     render() {
-      const { defaults } = this.props;
+      const { defaults, children } = this.props;
       const { invalid } = this.state;
+      const hasChildren = React.Children.count(children) > 0;
 
       return (
-        <WrappedFormElement
-          invalid={invalid}
-          defaults={defaults}
-          onInput={this.checkInputValidity}
-          onBlur={this.checkInputValidity}
-          onInvalid={this.onInvalid}
-        />
+        <>
+          {hasChildren && (
+            <WrappedFormElement
+              invalid={invalid}
+              defaults={defaults}
+              onInput={this.checkInputValidity}
+              onBlur={this.checkInputValidity}
+              onInvalid={this.onInvalid}
+            >
+              {children}
+            </WrappedFormElement>
+          )}
+          {!hasChildren && (
+            <WrappedFormElement
+              invalid={invalid}
+              defaults={defaults}
+              onInput={this.checkInputValidity}
+              onBlur={this.checkInputValidity}
+              onInvalid={this.onInvalid}
+            />
+          )}
+        </>
       );
     }
   }

@@ -214,7 +214,8 @@ export default class IndexPage extends Component {
                       defaults={{
                         name: "select",
                         id: "select",
-                        placeholder: "Select"
+                        placeholder: "Select",
+                        required: true
                       }}
                     >
                       <option>test1</option>
