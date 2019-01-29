@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, StaticQuery, graphql } from "gatsby";
 import styles from "./sidebarHeader.module.scss";
-import avatar from "../../images/avatar.jpg";
+import avatar from "../../images/avatar.png";
 
 const SidebarHeader = () => (
   <StaticQuery
