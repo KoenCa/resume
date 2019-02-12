@@ -4,8 +4,9 @@ import Wrapper from "../components/containers/wrapper";
 import Section from "../components/containers/section";
 import Container from "../components/containers/container";
 import MainHeader from "../components/typography/mainHeader";
+import { Features, FeaturedItem } from "../components/projects/featuredItem";
 import banner from "../images/undraw_programming_2svr.svg";
-import pic01 from "../images/pic01.jpg";
+import trillo from "../images/trillo.png";
 import pic02 from "../images/pic02.jpg";
 import pic03 from "../images/pic03.jpg";
 
@@ -69,24 +70,10 @@ export default class IndexPage extends Component {
             <Container>
               <h3>Projects</h3>
               <p>
-                Integer eu ante ornare amet commetus vestibulum blandit integer
-                in curae ac faucibus integer non. Adipiscing cubilia elementum
-                integer. Integer eu ante ornare amet commetus.
+                Some of the projects I made. You can find more on my{" "}
+                <a href="https://github.com/KoenCa">GitHub profile</a>.
               </p>
               <div className="features">
-                <article>
-                  <a href="#" className="image">
-                    <img src={pic01} alt="" />
-                  </a>
-                  <div className="inner">
-                    <h4>Possibly broke spacetime</h4>
-                    <p>
-                      Integer eu ante ornare amet commetus vestibulum blandit
-                      integer in curae ac faucibus integer adipiscing ornare
-                      amet.
-                    </p>
-                  </div>
-                </article>
                 <article>
                   <a href="#" className="image">
                     <img src={pic02} alt="" />
@@ -113,6 +100,19 @@ export default class IndexPage extends Component {
                     </p>
                   </div>
                 </article>
+
+                <Features>
+                  <FeaturedItem
+                    url="https://koen-castermans-trillo.netlify.com"
+                    pic={trillo}
+                    title="Booking app design"
+                  >
+                    Design made to learn more about flexbox. Part of{" "}
+                    <a href="https://www.udemy.com/advanced-css-and-sass">
+                      Advanced CSS and SASS Udemy course
+                    </a>
+                  </FeaturedItem>
+                </Features>
               </div>
             </Container>
           </Section>
