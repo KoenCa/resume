@@ -1,7 +1,7 @@
-@import '../../sass/libs/vars';
-@import '../../sass/libs/functions';
-@import '../../sass/libs/vendor';
-@import '../../sass/_main_breakpoints';
+@import "../../sass/libs/vars";
+@import "../../sass/libs/functions";
+@import "../../sass/libs/vendor";
+@import "../../sass/_main_breakpoints";
 
 .features {
     &:first-child {
@@ -43,7 +43,7 @@
     }
 }
 
-@include breakpoint('<=small') {
+@include breakpoint("<=small") {
     .featureImage {
         display: block;
         margin: 0 0 _size(element-margin) 0;
@@ -61,7 +61,7 @@
     }
 }
 
-@include breakpoint('<=xsmall') {
+@include breakpoint("<=xsmall") {
     .featureImage {
         img {
             height: 13em;
