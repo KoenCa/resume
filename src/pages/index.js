@@ -7,8 +7,8 @@ import MainHeader from "../components/typography/mainHeader";
 import { Features, FeaturedItem } from "../components/projects/featuredItem";
 import banner from "../images/undraw_programming_2svr.svg";
 import trillo from "../images/trillo.png";
-import pic02 from "../images/pic02.jpg";
-import pic03 from "../images/pic03.jpg";
+import budgety from "../images/budgety.png";
+import nexter from "../images/nexter.png";
 
 import Layout from "../components/layout";
 
@@ -73,47 +73,51 @@ export default class IndexPage extends Component {
                 Some of the projects I made. You can find more on my{" "}
                 <a href="https://github.com/KoenCa">GitHub profile</a>.
               </p>
-              <div className="features">
-                <article>
-                  <a href="#" className="image">
-                    <img src={pic02} alt="" />
-                  </a>
-                  <div className="inner">
-                    <h4>Terraformed a small moon</h4>
-                    <p>
-                      Integer eu ante ornare amet commetus vestibulum blandit
-                      integer in curae ac faucibus integer adipiscing ornare
-                      amet.
-                    </p>
-                  </div>
-                </article>
-                <article>
-                  <a href="#" className="image">
-                    <img src={pic03} alt="" />
-                  </a>
-                  <div className="inner">
-                    <h4>Snapped dark matter in the wild</h4>
-                    <p>
-                      Integer eu ante ornare amet commetus vestibulum blandit
-                      integer in curae ac faucibus integer adipiscing ornare
-                      amet.
-                    </p>
-                  </div>
-                </article>
-
-                <Features>
-                  <FeaturedItem
-                    url="https://koen-castermans-trillo.netlify.com"
-                    pic={trillo}
-                    title="Booking app design"
+              <Features>
+                <FeaturedItem
+                  url="https://koen-castermans-nexter.netlify.com/"
+                  pic={nexter}
+                  title="Realtors website design"
+                >
+                  Design made to learn more about CSS grid. Part of{" "}
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.udemy.com/advanced-css-and-sass"
                   >
-                    Design made to learn more about flexbox. Part of{" "}
-                    <a href="https://www.udemy.com/advanced-css-and-sass">
-                      Advanced CSS and SASS Udemy course
-                    </a>
-                  </FeaturedItem>
-                </Features>
-              </div>
+                    Advanced CSS and SASS Udemy course
+                  </a>
+                </FeaturedItem>
+                <FeaturedItem
+                  url="https://koen-castermans-trillo.netlify.com"
+                  pic={trillo}
+                  title="Booking app design"
+                >
+                  Design made to learn more about flexbox. Part of{" "}
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.udemy.com/advanced-css-and-sass"
+                  >
+                    Advanced CSS and SASS Udemy course
+                  </a>
+                </FeaturedItem>
+                <FeaturedItem
+                  url="https://koen-castermans-trillo.netlify.com"
+                  pic={budgety}
+                  title="Simple monthly budget app"
+                >
+                  Simple app made during{" "}
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://koen-castermans-budget.netlify.com/"
+                  >
+                    a JavaScript course on Udemy
+                  </a>
+                  .
+                </FeaturedItem>
+              </Features>
             </Container>
           </Section>
 
