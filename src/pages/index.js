@@ -103,7 +103,7 @@ export default class IndexPage extends Component {
                   </a>
                 </FeaturedItem>
                 <FeaturedItem
-                  url="https://koen-castermans-trillo.netlify.com"
+                  url="https://koen-castermans-budget.netlify.com/"
                   pic={budgety}
                   title="Simple monthly budget app"
                 >
