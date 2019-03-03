@@ -5,12 +5,13 @@ import Section from "../components/containers/section";
 import Container from "../components/containers/container";
 import MainHeader from "../components/typography/mainHeader";
 import { Features, FeaturedItem } from "../components/projects/featuredItem";
+import Layout from "../components/layout";
+import { Footer } from "../components/footer/footer";
+import { Copyright } from "../components/footer/copyright";
 import banner from "../images/undraw_programming_2svr.svg";
 import trillo from "../images/trillo.png";
 import budgety from "../images/budgety.png";
 import nexter from "../images/nexter.png";
-
-import Layout from "../components/layout";
 
 export default class IndexPage extends Component {
   constructor(props) {
@@ -121,16 +122,9 @@ export default class IndexPage extends Component {
             </Container>
           </Section>
 
-          <section id="footer">
-            <div className="container">
-              <ul className="copyright">
-                <li>&copy; Koen Castermans. All rights reserved.</li>
-                <li>
-                  Design: <a href="http://html5up.net">HTML5 UP</a>
-                </li>
-              </ul>
-            </div>
-          </section>
+          <Footer>
+            <Copyright />
+          </Footer>
         </Wrapper>
       </Layout>
     );
