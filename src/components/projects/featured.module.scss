@@ -3,17 +3,15 @@
 @import "../../sass/libs/vendor";
 @import "../../sass/_main_breakpoints";
 
-.features {
-    &:first-child {
-        border-top: 0;
-        padding-top: 0;
-    }
-}
-
 .feature {
     border-top: solid (_size(border-width) * 1.5) _palette(border);
     margin-bottom: _size(element-margin);
     padding-top: _size(element-margin);
+
+    &:first-child {
+        border-top: 0;
+        padding-top: 0;
+    }
 }
 
 .featureImage {
