@@ -1,0 +1,15 @@
+@import "../../sass/main_breakpoints";
+
+.footer {
+    background: #fafafa;
+    border-top: 0;
+    color: #c0c0c0;
+    overflow: hidden;
+    padding: 3em 0 2em 0;
+}
+
+@include breakpoint("<=small") {
+    .footer {
+        text-align: center;
+    }
+}
