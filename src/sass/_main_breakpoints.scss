@@ -1,4 +1,4 @@
-@import '../../sass/libs/breakpoints';
+@import '/src/sass/libs/breakpoints';
 
 @include breakpoints((
     xlarge:   ( 1281px,  1680px ),
