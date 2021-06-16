@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./actionsBox.module.scss";
+import * as styles from "./actionsBox.module.scss";
 
 const ActionsBox = ({ children, special, stacked, fit }) => {
   let boxStyles = styles.actions;

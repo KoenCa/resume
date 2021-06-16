@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./sidebarNav.module.scss";
+import * as styles from "./sidebarNav.module.scss";
 
 const SidebarNavItem = ({ active, onClick, id, children }) => (
   <li className={styles.navListItem}>

@@ -1,6 +1,6 @@
 import React from "react";
 import validation from "./validation";
-import styles from "./select.module.scss";
+import * as styles from "./select.module.scss";
 import generalStyles from "./formUtils.module.scss";
 
 const Select = ({

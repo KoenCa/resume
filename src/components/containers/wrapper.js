@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./wrapper.module.scss";
+import * as styles from "./wrapper.module.scss";
 
 const Wrapper = ({ children, moveForSidebar }) => {
   let wrapperStyles = styles.wrapper;

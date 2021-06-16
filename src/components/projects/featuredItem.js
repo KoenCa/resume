@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./featured.module.scss";
+import * as styles from "./featured.module.scss";
 
 export const Features = ({ children }) => (
   <div className={styles.features}>{children}</div>

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./inputButton.module.scss";
+import * as styles from "./inputButton.module.scss";
 
 const InputButton = ({ defaults, primary, fit, small, large, alt }) => {
   let buttonStyles = styles.button;

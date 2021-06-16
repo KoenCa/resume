@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./sidebar.module.scss";
+import * as styles from "./sidebar.module.scss";
 import TitleBar from "./titlebar";
 import SidebarHeader from "./sidebarHeader";
 import SidebarNav from "./sidebarNav";

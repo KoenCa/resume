@@ -1,6 +1,6 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
-import styles from "./mainHeader.module.scss";
+import * as styles from "./mainHeader.module.scss";
 
 const MainHeader = () => (
   <StaticQuery

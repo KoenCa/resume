@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./titlebar.module.scss";
+import * as styles from "./titlebar.module.scss";
 
 const Sidebar = ({ onToggleClick, sidebarVisible }) => {
   let titleBarStyles = styles.titleBar;

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./headerSubtitle.module.scss";
+import * as styles from "./headerSubtitle.module.scss";
 
 // Possible levels are 2 until 6
 // Header is mandatory
