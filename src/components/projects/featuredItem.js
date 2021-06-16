@@ -1,9 +1,7 @@
 import React from "react";
 import * as styles from "./featured.module.scss";
 
-export const Features = ({ children }) => (
-  <div className={styles.features}>{children}</div>
-);
+export const Features = ({ children }) => <div>{children}</div>;
 
 export const FeaturedItem = ({ url, pic, title, children }) => (
   <article className={styles.feature}>
