@@ -806,24 +806,6 @@ table {
             height: 12em;
         }
     }
-
-    /* Features */
-
-    .features {
-        article {
-            .image {
-                display: block;
-                margin: 0 0 _size(element-margin) 0;
-                padding-right: 0;
-                width: 100%;
-            }
-
-            .inner {
-                display: block;
-                width: 100%;
-            }
-        }
-    }
 }
 
 /* XSmall */
