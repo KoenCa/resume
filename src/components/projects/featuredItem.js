@@ -1,21 +1,47 @@
 import React from "react";
-import * as styles from "./featured.module.scss";
+import {
+  feature,
+  featureImageContainer,
+  featureImage,
+  featureImageObjectFitCover,
+  featureImageObjectFitContain,
+  featureDescription,
+} from "./featured.module.scss";
 
 export const Features = ({ children }) => <div>{children}</div>;
 
-export const FeaturedItem = ({ url, pic, title, children }) => (
-  <article className={styles.feature}>
+export const FeaturedItem = ({
+  url,
+  pic,
+  title,
+  picFit = "cover", // "cover" or "contain"
+  children,
+}) => (
+  <article className={feature}>
     <a
       target="_blank"
       rel="noopener noreferrer"
       href={url}
-      className={styles.featureImage}
+      className={featureImageContainer}
     >
-      <img src={pic} alt="Project picture" />
+      <img
+        className={featureImageClassNames(picFit)}
+        src={pic}
+        alt="Featured item picture"
+      />
     </a>
-    <div className={styles.featureDescription}>
+    <div className={featureDescription}>
       <h4>{title}</h4>
       <p>{children}</p>
     </div>
   </article>
 );
+
+const featureImageClassNames = (picFit) => {
+  let classNames = featureImage;
+
+  if (picFit === "cover") classNames += ` ${featureImageObjectFitCover}`;
+  if (picFit === "contain") classNames += ` ${featureImageObjectFitContain}`;
+
+  return classNames;
+};
