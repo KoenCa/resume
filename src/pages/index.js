@@ -4,6 +4,7 @@ import Wrapper from "../components/containers/wrapper";
 import Section from "../components/containers/section";
 import Container from "../components/containers/container";
 import MainHeader from "../components/typography/mainHeader";
+import HeaderSubtitle from "../components/typography/headerSubtitle";
 import { Features, FeaturedItem } from "../components/projects/featuredItem";
 import Layout from "../components/layout";
 import { Footer } from "../components/footer/footer";
@@ -12,27 +13,32 @@ import banner from "../images/undraw_programming_2svr.svg";
 import trillo from "../images/trillo.png";
 import budgety from "../images/budgety.png";
 import nexter from "../images/nexter.png";
+import pxlLogo from "../images/pxl_logo.png";
 
 export default class IndexPage extends Component {
   constructor(props) {
     super(props);
     this.sections = [
       {
-        id: "one",
-        title: "About"
+        id: "aboutSection",
+        title: "About",
       },
       {
-        id: "two",
-        title: "Projects"
-      }
+        id: "educationSection",
+        title: "Education",
+      },
+      {
+        id: "projectsSection",
+        title: "Projects",
+      },
     ];
     this.state = {
       activeSection: this.sections[0].id,
-      moveBodyForSidebar: false
+      moveBodyForSidebar: false,
     };
   }
 
-  onSectionMoreVisible = sectionId => {
+  onSectionMoreVisible = (sectionId) => {
     this.setState({ activeSection: sectionId });
   };
 
@@ -49,7 +55,10 @@ export default class IndexPage extends Component {
           moveBodyForSidebar={this.moveBodyForSidebar}
         />
         <Wrapper moveForSidebar={this.state.moveBodyForSidebar}>
-          <Section id="one" onSectionMoreVisible={this.onSectionMoreVisible}>
+          <Section
+            id="aboutSection"
+            onSectionMoreVisible={this.onSectionMoreVisible}
+          >
             <div className="image main" data-position="center">
               <img src={banner} alt="" />
             </div>
@@ -67,7 +76,34 @@ export default class IndexPage extends Component {
             </Container>
           </Section>
 
-          <Section id="two" onSectionMoreVisible={this.onSectionMoreVisible}>
+          <Section
+            id="educationSection"
+            onSectionMoreVisible={this.onSectionMoreVisible}
+          >
+            <Container>
+              <HeaderSubtitle
+                level="3"
+                header="Education"
+                subtitle="Overview of relevant education."
+              />
+              <Features>
+                <FeaturedItem
+                  url="https://www.pxl.be/"
+                  pic={pxlLogo}
+                  picFit={"contain"}
+                  title="Bachelor in Applied informatics"
+                >
+                  I started this bachelor at PXL University in 2014 and
+                  graduated in 2017.
+                </FeaturedItem>
+              </Features>
+            </Container>
+          </Section>
+
+          <Section
+            id="projectsSection"
+            onSectionMoreVisible={this.onSectionMoreVisible}
+          >
             <Container>
               <h3>Projects</h3>
               <p>
