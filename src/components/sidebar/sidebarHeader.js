@@ -23,7 +23,7 @@ const SidebarHeader = () => (
           <h1>
             <Link to="/">{data.site.siteMetadata.title}</Link>
           </h1>
-          <p>Web Developer</p>
+          <p>Full Stack Web Developer with a passion for the front-end</p>
         </header>
       </>
     )}
