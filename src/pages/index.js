@@ -81,11 +81,12 @@ export default class IndexPage extends Component {
             onSectionMoreVisible={this.onSectionMoreVisible}
           >
             <Container>
-              <HeaderSubtitle
-                level="3"
-                header="Education"
-                subtitle="Overview of relevant education."
-              />
+              <header>
+                <h3>Education</h3>
+                <HeaderSubtitle level="3">
+                  Overview of relevant education.
+                </HeaderSubtitle>
+              </header>
               <Features>
                 <FeaturedItem
                   url="https://www.pxl.be/"
@@ -106,10 +107,10 @@ export default class IndexPage extends Component {
           >
             <Container>
               <h3>Projects</h3>
-              <p>
+              <HeaderSubtitle level="3">
                 Some of the projects I made. You can find more on my{" "}
                 <a href="https://github.com/KoenCa">GitHub profile</a>.
-              </p>
+              </HeaderSubtitle>
               <Features>
                 <FeaturedItem
                   url="https://koen-castermans-nexter.netlify.com/"
