@@ -14,6 +14,8 @@ import trillo from "../images/trillo.png";
 import budgety from "../images/budgety.png";
 import nexter from "../images/nexter.png";
 import pxlLogo from "../images/pxl_logo.png";
+import kabisaLogo from "../images/kabisa_logo.png"
+import dovetailLogo from "../images/dovetail_logo.png"
 
 export default class IndexPage extends Component {
   constructor(props) {
@@ -26,6 +28,10 @@ export default class IndexPage extends Component {
       {
         id: "educationSection",
         title: "Education",
+      },
+      {
+        id: "workSection",
+        title: "Work Experience",
       },
       {
         id: "projectsSection",
@@ -96,6 +102,41 @@ export default class IndexPage extends Component {
                 >
                   I started this bachelor at PXL University in 2014 and
                   graduated in 2017.
+                </FeaturedItem>
+              </Features>
+            </Container>
+          </Section>
+
+          <Section
+            id="workSection"
+            onSectionMoreVisible={this.onSectionMoreVisible}
+          >
+            <Container>
+              <header>
+                <h3>Work Experience</h3>
+                <HeaderSubtitle level="3">
+                  My work experience since my graduation.
+                </HeaderSubtitle>
+              </header>
+              <Features>
+              <FeaturedItem
+                  url="https://www.dovetail.world/en/"
+                  pic={dovetailLogo}
+                  picFit={"contain"}
+                  title="Web developer at Dovetail"
+                >
+                  From July 2017 until July 2021 I worked as a full stack web developer
+                  at Dovetail.
+                </FeaturedItem>
+                <FeaturedItem
+                  url="https://www.kabisa.nl/"
+                  pic={kabisaLogo}
+                  picFit={"contain"}
+                  title="Web developer internship at Kabisa"
+                >
+                  From February 2017 until June 2017 I did an internship at Kabisa
+                  as a web developer where I added a new functionality to the iPaaS product
+                  called Dovetail.
                 </FeaturedItem>
               </Features>
             </Container>
