@@ -16,6 +16,10 @@ import nexter from "../images/nexter.png";
 import pxlLogo from "../images/pxl_logo.png";
 import kabisaLogo from "../images/kabisa_logo.png";
 import dovetailLogo from "../images/dovetail_logo.png";
+import psm1Badge from "../images/psmi.png";
+import completeJsCert from "../images/complete_javascript_cert.jpg";
+import advancedCssCert from "../images/advanced_css_cert.jpg";
+import masterElectronCert from "../images/master_electron_cert.jpg";
 
 export default class IndexPage extends Component {
   constructor(props) {
@@ -97,13 +101,53 @@ export default class IndexPage extends Component {
               </header>
               <Features>
                 <FeaturedItem
+                  url="https://www.udemy.com/certificate/UC-WZPVU90M/"
+                  pic={advancedCssCert}
+                  picFit={"contain"}
+                  title="Advanced CSS and Sass"
+                >
+                  In 2018 I took this course on Udemy to gain more knowledge and
+                  practical experience with CSS.
+                </FeaturedItem>
+                <FeaturedItem
+                  url="https://www.scrum.org/certificates/290409"
+                  pic={psm1Badge}
+                  picFit={"contain"}
+                  title="Professional Scrum Master 1"
+                >
+                  At the beginning of 2018 I took part in a 3 day training of{" "}
+                  <a target="_blank" href="https://scrumit.nl/">
+                    Scrumit
+                  </a>{" "}
+                  to learn more about Scrum and completed the official
+                  Professional Scrum Master I certification shortly after that.
+                </FeaturedItem>
+                <FeaturedItem
                   url="https://www.pxl.be/"
                   pic={pxlLogo}
                   picFit={"contain"}
                   title="Bachelor in Applied informatics"
                 >
                   I started this bachelor at PXL University in 2014 and
-                  graduated in 2017.
+                  graduated on 1 July 2017.
+                </FeaturedItem>
+                <FeaturedItem
+                  url="https://www.udemy.com/certificate/UC-47LWHKAF/"
+                  pic={masterElectronCert}
+                  picFit={"contain"}
+                  title="Master Electron"
+                >
+                  In 2017 I took this course on Udemy to gain more knowledge and
+                  practical experience with Electron.
+                </FeaturedItem>
+                <FeaturedItem
+                  url="https://www.udemy.com/certificate/UC-86F6XVAG/"
+                  pic={completeJsCert}
+                  picFit={"contain"}
+                  title="Complete JavaScript course"
+                >
+                  In 2017 I took this course on Udemy to gain more knowledge and
+                  practical experience with JavaScript.
                 </FeaturedItem>
               </Features>
             </Container>
