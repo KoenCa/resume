@@ -77,8 +77,8 @@ export default class IndexPage extends Component {
                 stack web developer. This allowed me to gain experience in many
                 different technologies which include: React, Ruby on Rails, Java
                 (Apache Karaf, Spring Boot), Docker, MongoDB, Elastic Search,
-                Ansible, etc. In my next job I want to focus on and specialise in
-                the front-end part of web development, because that is what I
+                Ansible, etc. In my next job I want to focus on and specialise
+                in the front-end part of web development, because that is what I
                 enjoy the most.
               </p>
             </Container>
