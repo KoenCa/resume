@@ -14,8 +14,8 @@ import trillo from "../images/trillo.png";
 import budgety from "../images/budgety.png";
 import nexter from "../images/nexter.png";
 import pxlLogo from "../images/pxl_logo.png";
-import kabisaLogo from "../images/kabisa_logo.png"
-import dovetailLogo from "../images/dovetail_logo.png"
+import kabisaLogo from "../images/kabisa_logo.png";
+import dovetailLogo from "../images/dovetail_logo.png";
 
 export default class IndexPage extends Component {
   constructor(props) {
@@ -71,13 +71,15 @@ export default class IndexPage extends Component {
             <Container>
               <MainHeader />
               <p>
-                I'm a web developer that likes to work in front-end as well as
-                in the back-end. In my current job at{" "}
-                <a href="https://dovetail.world/en/">Dovetail</a> I mainly work
-                with Backbone/React in the front-end and Ruby on Rails in the
-                back-end. In my spare time I also like to learn other
-                technologies by making some small projects. These projects are
-                listed below.
+                In my first job at{" "}
+                <a href="https://dovetail.world/en/">Dovetail</a> I started out
+                as a front-end web developer and slowly evolved into a full
+                stack web developer. This allowed me to gain experience in many
+                different technologies which include: React, Ruby on Rails, Java
+                (Apache Karaf, Spring Boot), Docker, MongoDB, Elastic Search,
+                Ansible, etc. In my next job I want to focus on and specialise in
+                the front-end part of web development, because that is what I
+                enjoy the most.
               </p>
             </Container>
           </Section>
@@ -119,14 +121,14 @@ export default class IndexPage extends Component {
                 </HeaderSubtitle>
               </header>
               <Features>
-              <FeaturedItem
+                <FeaturedItem
                   url="https://www.dovetail.world/en/"
                   pic={dovetailLogo}
                   picFit={"contain"}
                   title="Web developer at Dovetail"
                 >
-                  From July 2017 until July 2021 I worked as a full stack web developer
-                  at Dovetail.
+                  From July 2017 until July 2021 I worked as a full stack web
+                  developer at Dovetail.
                 </FeaturedItem>
                 <FeaturedItem
                   url="https://www.kabisa.nl/"
@@ -134,9 +136,9 @@ export default class IndexPage extends Component {
                   picFit={"contain"}
                   title="Web developer internship at Kabisa"
                 >
-                  From February 2017 until June 2017 I did an internship at Kabisa
-                  as a web developer where I added a new functionality to the iPaaS product
-                  called Dovetail.
+                  From February 2017 until June 2017 I did an internship at
+                  Kabisa as a web developer where I added a new functionality to
+                  the iPaaS product called Dovetail.
                 </FeaturedItem>
               </Features>
             </Container>
