@@ -5,7 +5,10 @@ export const Copyright = () => (
   <ul className={styles.copyright}>
     <li>&copy; Koen Castermans. All rights reserved.</li>
     <li>
-      Design: <a href="http://html5up.net">HTML5 UP</a>
+      Design: <a target="_blank" href="https://html5up.net/read-only">HTML5 UP</a>
+    </li>
+    <li>
+        Source code: <a target="_blank" href="https://github.com/KoenCa/resume">GitHub repository</a>
     </li>
   </ul>
 );
