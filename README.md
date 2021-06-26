@@ -1,5 +1,7 @@
 # Resume
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/896e65b2-d3fa-40cd-8eae-674e5e847e2b/deploy-status)](https://app.netlify.com/sites/koencastermans/deploys)
+
 My personal resume built using [GatsbyJS](https://www.gatsbyjs.com/) with the
 `Read Only` design from [HTML5 UP](https://html5up.net/). I converted most of the
 design to React components, because I like to work with building blocks that can be
@@ -21,7 +23,7 @@ with React and also uses new features of modern browsers:
 ## Hosting
 
 It is hosted on Netlify on my own domain: https://www.koencastermans.com/. Every push
-to the master `master` branch will trigger a production deploy. Every push to the
+to the `master` branch will trigger a production deploy. Every push to the
 `development` branch will trigger a separate deploy for testing purposes. This also
 applies to pull requests against the `master` and `development` branches. They will
 get their own deploy previews to check how the new changes would look in a production
@@ -43,7 +45,7 @@ To start the local development server run the following command:
 gatsby develop
 ```
 
-It should start a local server on `http://localhost:8000/` which live reload on
+It should start a local server on `http://localhost:8000/` which live reloads on
 every saved change.
 
 ## Build
