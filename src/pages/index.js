@@ -10,7 +10,7 @@ import Layout from "../components/layout";
 import { Footer } from "../components/footer/footer";
 import { Copyright } from "../components/footer/copyright";
 import banner from "../images/undraw_programming_2svr.svg";
-import trillo from "../images/trillo.png";
+import pomodoro from "../images/pomodoro.png";
 import budgety from "../images/budgety.png";
 import nexter from "../images/nexter.png";
 import pxlLogo from "../images/pxl_logo.png";
@@ -200,6 +200,32 @@ export default class IndexPage extends Component {
               </HeaderSubtitle>
               <Features>
                 <FeaturedItem
+                  url="https://koen-pomodoro.netlify.app/"
+                  pic={pomodoro}
+                  title="Simple Pomodoro timer app"
+                >
+                  Simple Pomodoro timer app. Source code:{" "}
+                  <a targert="_blank" href="https://github.com/KoenCa/pomodoro">
+                    GitHub repository
+                  </a>
+                  .
+                </FeaturedItem>
+                <FeaturedItem
+                  url="https://koen-castermans-budget.netlify.com/"
+                  pic={budgety}
+                  title="Simple monthly budget app"
+                >
+                  Simple app made during a JavaScript course on Udemy. Source
+                  code:{" "}
+                  <a
+                    targert="_blank"
+                    href="https://github.com/KoenCa/budget-app"
+                  >
+                    GitHub repository
+                  </a>
+                  .
+                </FeaturedItem>
+                <FeaturedItem
                   url="https://koen-castermans-nexter.netlify.com/"
                   pic={nexter}
                   title="Realtors website design"
@@ -212,35 +238,13 @@ export default class IndexPage extends Component {
                   >
                     Advanced CSS and SASS Udemy course
                   </a>
-                </FeaturedItem>
-                <FeaturedItem
-                  url="https://koen-castermans-trillo.netlify.com"
-                  pic={trillo}
-                  title="Booking app design"
-                >
-                  Design made to learn more about flexbox. Part of{" "}
+                  . Source code:{" "}
                   <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.udemy.com/advanced-css-and-sass"
+                    targert="_blank"
+                    href="https://github.com/KoenCa/Nexter-Udemy-course-project"
                   >
-                    Advanced CSS and SASS Udemy course
+                    GitHub repository
                   </a>
-                </FeaturedItem>
-                <FeaturedItem
-                  url="https://koen-castermans-budget.netlify.com/"
-                  pic={budgety}
-                  title="Simple monthly budget app"
-                >
-                  Simple app made during{" "}
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://koen-castermans-budget.netlify.com/"
-                  >
-                    a JavaScript course on Udemy
-                  </a>
-                  .
                 </FeaturedItem>
               </Features>
             </Container>
