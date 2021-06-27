@@ -1,0 +1,30 @@
+@import "../../sass/libs/vars";
+@import "../../sass/libs/functions";
+@import "../../sass/_main_breakpoints";
+
+.featureListItem {
+    display: inline-block;
+    margin: 0 0 (_size(element-margin) * 0.75) 2.3em;
+    position: relative;
+    vertical-align: top;
+    width: 44%;
+}
+
+.featureListItemIcon {
+    left: -2.3em;
+    top: -0.2em;
+    position: absolute;
+}
+
+@include breakpoint("<=small") {
+    .featureListItem {
+        margin: 0 0 (_size(element-margin) * 0.75) 2em;
+    }
+}
+
+@include breakpoint("<=xsmall") {
+    .featureListItem {
+        display: block;
+        width: 100%;
+    }
+}

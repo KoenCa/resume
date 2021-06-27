@@ -5,7 +5,9 @@ import Section from "../components/containers/section";
 import Container from "../components/containers/container";
 import MainHeader from "../components/typography/mainHeader";
 import HeaderSubtitle from "../components/typography/headerSubtitle";
-import { Features, FeaturedItem } from "../components/projects/featuredItem";
+import Features from "../components/features/features";
+import FeaturedItem from "../components/features/featuredItem";
+import FeatureList from "../components/features/featureList";
 import Layout from "../components/layout";
 import { Footer } from "../components/footer/footer";
 import { Copyright } from "../components/footer/copyright";
@@ -20,6 +22,7 @@ import psm1Badge from "../images/psmi.png";
 import completeJsCert from "../images/complete_javascript_cert.jpg";
 import advancedCssCert from "../images/advanced_css_cert.jpg";
 import masterElectronCert from "../images/master_electron_cert.jpg";
+import FeatureListItem from "../components/features/featureListItem";
 
 export default class IndexPage extends Component {
   constructor(props) {

@@ -6,11 +6,9 @@ import {
   featureImageObjectFitCover,
   featureImageObjectFitContain,
   featureDescription,
-} from "./featured.module.scss";
+} from "./featuredItem.module.scss";
 
-export const Features = ({ children }) => <div>{children}</div>;
-
-export const FeaturedItem = ({
+const FeaturedItem = ({
   url,
   pic,
   title,
@@ -45,3 +43,5 @@ const featureImageClassNames = (picFit) => {
 
   return classNames;
 };
+
+export default FeaturedItem;
