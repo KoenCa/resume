@@ -44,6 +44,10 @@ export default class IndexPage extends Component {
         id: "projectsSection",
         title: "Projects",
       },
+      {
+        id: "technologyExperienceSection",
+        title: "Technology experience",
+      },
     ];
     this.state = {
       activeSection: this.sections[0].id,
@@ -250,6 +254,49 @@ export default class IndexPage extends Component {
                   </a>
                 </FeaturedItem>
               </Features>
+            </Container>
+          </Section>
+
+          <Section
+            id="technologyExperienceSection"
+            onSectionMoreVisible={this.onSectionMoreVisible}
+          >
+            <Container>
+              <h3>Technology experience</h3>
+              <HeaderSubtitle level="3">
+                The experience I have with different kinds of technologies like
+                languages, frameworks, libraries, etc. across the full stack.
+              </HeaderSubtitle>
+
+              <h4>Front-end</h4>
+              <FeatureList>
+                <FeatureListItem>HTML</FeatureListItem>
+                <FeatureListItem>CSS: Sass, BEM, modules, flexbox, grid</FeatureListItem>
+                <FeatureListItem>JS: ECMAScript, Coffeescript, TypeScript</FeatureListItem>
+                <FeatureListItem>UI: React, Backbone, Marionette, Jquery</FeatureListItem>
+                <FeatureListItem>Testing: Karma, Cypress</FeatureListItem>
+                <FeatureListItem>Tools: Webpack, Parcel, ESLint, Prettier</FeatureListItem>
+              </FeatureList>
+
+              <h4>Back-end</h4>
+              <FeatureList>
+                <FeatureListItem>Write all the code</FeatureListItem>
+                <FeatureListItem>Stack small boxes</FeatureListItem>
+                <FeatureListItem>Read books and stuff</FeatureListItem>
+                <FeatureListItem>Drink much coffee</FeatureListItem>
+                <FeatureListItem>Lightning bolt</FeatureListItem>
+                <FeatureListItem>Shadow clone technique</FeatureListItem>
+              </FeatureList>
+
+              <h4>Dev-ops</h4>
+              <FeatureList>
+                <FeatureListItem>Write all the code</FeatureListItem>
+                <FeatureListItem>Stack small boxes</FeatureListItem>
+                <FeatureListItem>Read books and stuff</FeatureListItem>
+                <FeatureListItem>Drink much coffee</FeatureListItem>
+                <FeatureListItem>Lightning bolt</FeatureListItem>
+                <FeatureListItem>Shadow clone technique</FeatureListItem>
+              </FeatureList>
             </Container>
           </Section>
 
