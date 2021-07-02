@@ -11,20 +11,22 @@
 }
 
 .featureListItemIcon {
-    left: -2.3em;
-    top: -0.2em;
+    font-size: 2em;
+    left: -1.1em;
+    top: -0.1em;
     position: absolute;
 }
 
 @include breakpoint("<=small") {
-    .featureListItem {
-        margin: 0 0 (_size(element-margin) * 0.75) 2em;
-    }
+  .featureListItem {
+    display: block;
+    width: 90%;
+}
 }
 
 @include breakpoint("<=xsmall") {
-    .featureListItem {
-        display: block;
-        width: 100%;
+    .featureListItemIcon {
+      font-size: 1.6em;
+      top: 0em;
     }
 }
