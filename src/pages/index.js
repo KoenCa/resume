@@ -41,12 +41,12 @@ export default class IndexPage extends Component {
         title: "Work Experience",
       },
       {
-        id: "projectsSection",
-        title: "Projects",
+        id: "developmentExperienceSection",
+        title: "Development experience",
       },
       {
-        id: "technologyExperienceSection",
-        title: "Technology experience",
+        id: "projectsSection",
+        title: "Projects",
       },
     ];
     this.state = {
@@ -179,7 +179,8 @@ export default class IndexPage extends Component {
                   title="Web developer at Dovetail"
                 >
                   From July 2017 until July 2021 I worked as a full stack web
-                  developer at Dovetail.
+                  developer at{" "}
+                  <a href="https://www.dovetail.world/en/">Dovetail</a>.
                 </FeaturedItem>
                 <FeaturedItem
                   url="https://www.kabisa.nl/"
@@ -189,9 +190,60 @@ export default class IndexPage extends Component {
                 >
                   From February 2017 until June 2017 I did an internship at
                   Kabisa as a web developer where I added a new functionality to
-                  the iPaaS product called Dovetail.
+                  the iPaaS product called{" "}
+                  <a href="https://www.dovetail.world/en/">Dovetail</a>.
                 </FeaturedItem>
               </Features>
+            </Container>
+          </Section>
+
+          <Section
+            id="developmentExperienceSection"
+            onSectionMoreVisible={this.onSectionMoreVisible}
+          >
+            <Container>
+              <h3>Development experience</h3>
+              <HeaderSubtitle level="3">
+                The experience I have with different kinds of languages,
+                frameworks, libraries, etc. across the full stack.
+              </HeaderSubtitle>
+
+              <h4>Front-end</h4>
+              <FeatureList>
+                <FeatureListItem>HTML</FeatureListItem>
+                <FeatureListItem>
+                  CSS: Sass, Bootstrap, BEM, modules, flexbox, grid
+                </FeatureListItem>
+                <FeatureListItem>
+                  JS: ECMAScript, Coffeescript, TypeScript
+                </FeatureListItem>
+                <FeatureListItem>
+                  UI: React, Backbone, Marionette, jQuery
+                </FeatureListItem>
+                <FeatureListItem>Testing: Karma, Cypress</FeatureListItem>
+                <FeatureListItem>
+                  Tools: Webpack, Parcel, ESLint, Prettier, GatsbyJS, Docusaurus
+                </FeatureListItem>
+              </FeatureList>
+
+              <h4>Back-end</h4>
+              <FeatureList>
+                <FeatureListItem>Ruby on Rails</FeatureListItem>
+                <FeatureListItem>Node.js: Express</FeatureListItem>
+                <FeatureListItem>
+                  Java: Apache Karaf, Spring Boot, Apache Camel
+                </FeatureListItem>
+              </FeatureList>
+
+              <h4>Dev-ops</h4>
+              <FeatureList>
+                <FeatureListItem>Docker</FeatureListItem>
+                <FeatureListItem>Ansible</FeatureListItem>
+                <FeatureListItem>Terraform</FeatureListItem>
+                <FeatureListItem>AWS</FeatureListItem>
+                <FeatureListItem>CI: Jenkins, GitHub Actions</FeatureListItem>
+                <FeatureListItem>Server management</FeatureListItem>
+              </FeatureList>
             </Container>
           </Section>
 
@@ -254,49 +306,6 @@ export default class IndexPage extends Component {
                   </a>
                 </FeaturedItem>
               </Features>
-            </Container>
-          </Section>
-
-          <Section
-            id="technologyExperienceSection"
-            onSectionMoreVisible={this.onSectionMoreVisible}
-          >
-            <Container>
-              <h3>Technology experience</h3>
-              <HeaderSubtitle level="3">
-                The experience I have with different kinds of technologies like
-                languages, frameworks, libraries, etc. across the full stack.
-              </HeaderSubtitle>
-
-              <h4>Front-end</h4>
-              <FeatureList>
-                <FeatureListItem>HTML</FeatureListItem>
-                <FeatureListItem>CSS: Sass, BEM, modules, flexbox, grid</FeatureListItem>
-                <FeatureListItem>JS: ECMAScript, Coffeescript, TypeScript</FeatureListItem>
-                <FeatureListItem>UI: React, Backbone, Marionette, Jquery</FeatureListItem>
-                <FeatureListItem>Testing: Karma, Cypress</FeatureListItem>
-                <FeatureListItem>Tools: Webpack, Parcel, ESLint, Prettier</FeatureListItem>
-              </FeatureList>
-
-              <h4>Back-end</h4>
-              <FeatureList>
-                <FeatureListItem>Write all the code</FeatureListItem>
-                <FeatureListItem>Stack small boxes</FeatureListItem>
-                <FeatureListItem>Read books and stuff</FeatureListItem>
-                <FeatureListItem>Drink much coffee</FeatureListItem>
-                <FeatureListItem>Lightning bolt</FeatureListItem>
-                <FeatureListItem>Shadow clone technique</FeatureListItem>
-              </FeatureList>
-
-              <h4>Dev-ops</h4>
-              <FeatureList>
-                <FeatureListItem>Write all the code</FeatureListItem>
-                <FeatureListItem>Stack small boxes</FeatureListItem>
-                <FeatureListItem>Read books and stuff</FeatureListItem>
-                <FeatureListItem>Drink much coffee</FeatureListItem>
-                <FeatureListItem>Lightning bolt</FeatureListItem>
-                <FeatureListItem>Shadow clone technique</FeatureListItem>
-              </FeatureList>
             </Container>
           </Section>
 
