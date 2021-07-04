@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./section.module.scss";
+import * as styles from "./section.module.scss";
 
 export default class Section extends Component {
   constructor(props) {
@@ -8,13 +8,14 @@ export default class Section extends Component {
     this.state = {
       prevRatio: 0
     };
-
-    this.observer = new IntersectionObserver(this.onIntersectionChange, {
-      threshold: [0.25, 0.5, 0.75, 1]
-    });
+    this.observer = null;
   }
 
   componentDidMount() {
+    this.observer = new IntersectionObserver(this.onIntersectionChange, {
+      threshold: [0.25, 0.5, 0.75, 1]
+    });
+
     this.observer.observe(this.sectionRef.current);
   }
 

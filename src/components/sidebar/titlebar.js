@@ -1,7 +1,12 @@
 import React from "react";
-import styles from "./titlebar.module.scss";
+import * as styles from "./titlebar.module.scss";
 
-const Sidebar = ({ onToggleClick, sidebarVisible }) => {
+/*
+    Only becomes visible on smaller screen sizes when the sidebar is hidden.
+    This contains the hamburger menu icon which will show the sidebar when it is
+    clicked on.
+*/
+const TitleBar = ({ onToggleClick, sidebarVisible }) => {
   let titleBarStyles = styles.titleBar;
   if (sidebarVisible) titleBarStyles += ` ${styles.mobileTitlebar}`;
 
@@ -15,4 +20,4 @@ const Sidebar = ({ onToggleClick, sidebarVisible }) => {
   );
 };
 
-export default Sidebar;
+export default TitleBar;

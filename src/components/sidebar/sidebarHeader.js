@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, StaticQuery, graphql } from "gatsby";
-import styles from "./sidebarHeader.module.scss";
+import * as styles from "./sidebarHeader.module.scss";
 import avatar from "../../images/avatar.png";
 
 const SidebarHeader = () => (
@@ -23,7 +23,7 @@ const SidebarHeader = () => (
           <h1>
             <Link to="/">{data.site.siteMetadata.title}</Link>
           </h1>
-          <p>Web Developer</p>
+          <p>Full Stack Web Developer with a passion for the front-end</p>
         </header>
       </>
     )}

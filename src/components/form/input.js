@@ -1,6 +1,6 @@
 import React from "react";
 import validation from "./validation";
-import styles from "./input.module.scss";
+import * as styles from "./input.module.scss";
 import generalStyles from "./formUtils.module.scss";
 
 const Input = ({ defaults, invalid, onInput, onBlur, onInvalid }) => {

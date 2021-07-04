@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./label.module.scss";
+import * as styles from "./label.module.scss";
 
 const Label = ({ children, defaults }) => (
   <label {...defaults} className={styles.label}>
