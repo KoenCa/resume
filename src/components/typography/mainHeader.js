@@ -1,6 +1,6 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
-import styles from "./mainHeader.module.scss";
+import * as styles from "./mainHeader.module.scss";
 
 const MainHeader = () => (
   <StaticQuery
@@ -17,7 +17,7 @@ const MainHeader = () => (
       <>
         <header>
           <h2 className={styles.h2}>{data.site.siteMetadata.title}</h2>
-          <p className={styles.p}>Web Developer</p>
+          <p className={styles.p}>Full Stack Web Developer with a passion for the front-end</p>
         </header>
       </>
     )}

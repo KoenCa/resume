@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import styles from "./sidebarFooter.module.scss";
+import * as styles from "./sidebarFooter.module.scss";
 
 const SidebarFooter = () => (
   <footer className={styles.footer}>

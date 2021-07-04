@@ -1,6 +1,6 @@
 import React from "react";
 import validation from "./validation";
-import styles from "./textarea.module.scss";
+import * as styles from "./textarea.module.scss";
 import generalStyles from "./formUtils.module.scss";
 
 const Textarea = ({ defaults, invalid, onInput, onBlur, onInvalid }) => {

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./section.module.scss";
+import * as styles from "./section.module.scss";
 
 export default class Section extends Component {
   constructor(props) {
@@ -8,6 +8,7 @@ export default class Section extends Component {
     this.state = {
       prevRatio: 0
     };
+    this.observer = null;
   }
 
   componentDidMount() {

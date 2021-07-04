@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./form.module.scss";
+import * as styles from "./form.module.scss";
 
 const Form = ({ children }) => {
   const onSubmit = ({ nativeEvent }) => {
