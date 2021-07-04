@@ -64,8 +64,8 @@ export default class IndexPage extends Component {
         title: "Development experience",
       },
       {
-        id: "projectsSection",
-        title: "Projects",
+        id: "sideProjectsSection",
+        title: "Side projects",
       },
     ];
     this.state = {
@@ -302,13 +302,14 @@ export default class IndexPage extends Component {
           </Section>
 
           <Section
-            id="projectsSection"
+            id="sideProjectsSection"
             onSectionMoreVisible={this.onSectionMoreVisible}
           >
             <Container>
-              <h3>Projects</h3>
+              <h3>Side projects</h3>
               <HeaderSubtitle level="3">
-                Some of the projects I made. You can find more on my{" "}
+                Some of the side projects I made to learn new stuff. You can
+                find more on my{" "}
                 <a href="https://github.com/KoenCa">GitHub profile</a>.
               </HeaderSubtitle>
               <Features>
