@@ -18,15 +18,15 @@
 }
 
 @include breakpoint("<=small") {
-  .featureListItem {
-    display: block;
-    width: 90%;
-}
+    .featureListItem {
+        display: block;
+        width: 90%;
+    }
 }
 
 @include breakpoint("<=xsmall") {
     .featureListItemIcon {
-      font-size: 1.6em;
-      top: 0em;
+        font-size: 1.6em;
+        top: 0em;
     }
 }
