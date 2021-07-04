@@ -20,6 +20,10 @@ with React and also uses new features of modern browsers:
   npm package.
 - The visibility of the sidebar on mobile is also controlled by React.
 
+Other noteworthy things:
+- The website can be installed as a PWA thanks to gatsby-plugin-manifest and gatbsy-plugin-offline.
+- Made my own simple favicon using Affinity Designer.
+
 ## Hosting
 
 It is hosted on Netlify on my own domain: https://www.koencastermans.com/. Every push
