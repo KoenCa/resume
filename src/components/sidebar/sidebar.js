@@ -13,6 +13,7 @@ class Sidebar extends Component {
     };
   }
 
+  // This can only be triggered when the title bar is visible on smaller screen sizes.
   onToggleClick = event => {
     event.preventDefault();
     this.setState({ sidebarVisible: !this.state.sidebarVisible });
