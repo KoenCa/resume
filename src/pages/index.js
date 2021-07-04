@@ -23,6 +23,24 @@ import completeJsCert from "../images/complete_javascript_cert.jpg";
 import advancedCssCert from "../images/advanced_css_cert.jpg";
 import masterElectronCert from "../images/master_electron_cert.jpg";
 import FeatureListItem from "../components/features/featureListItem";
+import {
+  faVial,
+  faToolbox,
+  faGem,
+  faDatabase,
+  faEnvelope,
+  faServer
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faHtml5,
+  faCss3Alt,
+  faJsSquare,
+  faNodeJs,
+  faJava,
+  faMicrosoft,
+  faDocker,
+  faAws
+} from "@fortawesome/free-brands-svg-icons";
 
 export default class IndexPage extends Component {
   constructor(props) {
@@ -210,39 +228,58 @@ export default class IndexPage extends Component {
 
               <h4>Front-end</h4>
               <FeatureList>
-                <FeatureListItem>HTML</FeatureListItem>
-                <FeatureListItem>
+                <FeatureListItem icon={faHtml5}>HTML</FeatureListItem>
+                <FeatureListItem icon={faCss3Alt}>
                   CSS: Sass, Bootstrap, BEM, modules, flexbox, grid
                 </FeatureListItem>
-                <FeatureListItem>
+                <FeatureListItem icon={faJsSquare}>
                   JS: ECMAScript, Coffeescript, TypeScript
                 </FeatureListItem>
-                <FeatureListItem>
-                  UI: React, Backbone, Marionette, jQuery
+                <FeatureListItem icon={faJsSquare}>
+                  UI: React, Backbone, Marionette, jQuery, Angular
                 </FeatureListItem>
-                <FeatureListItem>Testing: Karma, Cypress</FeatureListItem>
-                <FeatureListItem>
-                  Tools: Webpack, Parcel, ESLint, Prettier, GatsbyJS, Docusaurus
+                <FeatureListItem icon={faVial}>
+                  Testing: Karma, Cypress
+                </FeatureListItem>
+                <FeatureListItem icon={faToolbox}>
+                  Tools: Webpack, Parcel, ESLint, Prettier, GatsbyJS,
+                  Docusaurus, Electron
                 </FeatureListItem>
               </FeatureList>
 
               <h4>Back-end</h4>
               <FeatureList>
-                <FeatureListItem>Ruby on Rails</FeatureListItem>
-                <FeatureListItem>Node.js: Express</FeatureListItem>
-                <FeatureListItem>
-                  Java: Apache Karaf, Spring Boot, Apache Camel
+                <FeatureListItem icon={faGem}>
+                  Ruby on Rails: REST API, MVC, haml
+                </FeatureListItem>
+                <FeatureListItem icon={faNodeJs}>
+                  Node.js: REST API, Express
+                </FeatureListItem>
+                <FeatureListItem icon={faJava}>
+                  Apache Karaf: OSGI, Apache Camel
+                </FeatureListItem>
+                <FeatureListItem icon={faJava}>
+                  Spring Boot: REST API, MVC, Thymeleaf
+                </FeatureListItem>
+                <FeatureListItem icon={faMicrosoft}>
+                  .NET: c#, MVVM, Xamarin
+                </FeatureListItem>
+                <FeatureListItem icon={faDatabase}>
+                  Storage: MongoDB, MySql, Elastic Search
+                </FeatureListItem>
+                <FeatureListItem icon={faEnvelope}>
+                  Message brokers: Apache ActiveMQ, RabbitMQ
                 </FeatureListItem>
               </FeatureList>
 
               <h4>Dev-ops</h4>
               <FeatureList>
-                <FeatureListItem>Docker</FeatureListItem>
-                <FeatureListItem>Ansible</FeatureListItem>
-                <FeatureListItem>Terraform</FeatureListItem>
-                <FeatureListItem>AWS</FeatureListItem>
-                <FeatureListItem>CI: Jenkins, GitHub Actions</FeatureListItem>
-                <FeatureListItem>Server management</FeatureListItem>
+                <FeatureListItem icon={faDocker}>Docker</FeatureListItem>
+                <FeatureListItem icon={faServer}>Ansible</FeatureListItem>
+                <FeatureListItem icon={faServer}>Terraform</FeatureListItem>
+                <FeatureListItem icon={faAws}>AWS</FeatureListItem>
+                <FeatureListItem icon={faToolbox}>CI: Jenkins, GitHub Actions</FeatureListItem>
+                <FeatureListItem icon={faServer}>Server management</FeatureListItem>
               </FeatureList>
             </Container>
           </Section>
