@@ -29,7 +29,8 @@ import {
   faGem,
   faDatabase,
   faEnvelope,
-  faServer
+  faServer,
+  faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faHtml5,
@@ -280,6 +281,19 @@ export default class IndexPage extends Component {
                 <FeatureListItem icon={faAws}>AWS</FeatureListItem>
                 <FeatureListItem icon={faToolbox}>CI: Jenkins, GitHub Actions</FeatureListItem>
                 <FeatureListItem icon={faServer}>Server management</FeatureListItem>
+              </FeatureList>
+
+              <h4>Others</h4>
+              <FeatureList>
+                <FeatureListItem icon={faUsers}>
+                  Agile workflow: Scrum
+                </FeatureListItem>
+                <FeatureListItem icon={faUsers}>
+                  Internship supervisor
+                </FeatureListItem>
+                <FeatureListItem icon={faUsers}>
+                  Customer support
+                </FeatureListItem>
               </FeatureList>
             </Container>
           </Section>
