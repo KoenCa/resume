@@ -40,7 +40,7 @@ import {
   faJava,
   faMicrosoft,
   faDocker,
-  faAws
+  faAws,
 } from "@fortawesome/free-brands-svg-icons";
 
 export default class IndexPage extends Component {
@@ -101,15 +101,13 @@ export default class IndexPage extends Component {
             <Container>
               <MainHeader />
               <p>
-                In my first job at{" "}
+                In my internship and first job at{" "}
                 <a href="https://dovetail.world/en/">Dovetail</a> I started out
                 as a front-end web developer and slowly evolved into a full
-                stack web developer. This allowed me to gain experience in many
-                different technologies which include: React, Ruby on Rails, Java
-                (Apache Karaf, Spring Boot), Docker, MongoDB, Elastic Search,
-                Ansible, etc. In my next job I want to focus on and specialise
-                in the front-end part of web development, because that is what I
-                enjoy the most.
+                stack web developer. This allowed me to gain experience across
+                the full stack of web development. In the coming future I want
+                to focus on and specialise in the front-end part of web
+                development, because that is what I enjoy the most.
               </p>
             </Container>
           </Section>
@@ -223,8 +221,9 @@ export default class IndexPage extends Component {
             <Container>
               <h3>Development experience</h3>
               <HeaderSubtitle level="3">
-                The experience I have with different kinds of languages,
-                frameworks, libraries, etc. across the full stack.
+                The experiences I've gained during my development carreer that
+                are technology related, but also some that are not technology
+                related.
               </HeaderSubtitle>
 
               <h4>Front-end</h4>
@@ -279,8 +278,12 @@ export default class IndexPage extends Component {
                 <FeatureListItem icon={faServer}>Ansible</FeatureListItem>
                 <FeatureListItem icon={faServer}>Terraform</FeatureListItem>
                 <FeatureListItem icon={faAws}>AWS</FeatureListItem>
-                <FeatureListItem icon={faToolbox}>CI: Jenkins, GitHub Actions</FeatureListItem>
-                <FeatureListItem icon={faServer}>Server management</FeatureListItem>
+                <FeatureListItem icon={faToolbox}>
+                  CI: Jenkins, GitHub Actions
+                </FeatureListItem>
+                <FeatureListItem icon={faServer}>
+                  Server management
+                </FeatureListItem>
               </FeatureList>
 
               <h4>Others</h4>
