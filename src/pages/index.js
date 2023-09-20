@@ -16,6 +16,7 @@ import pomodoro from "../images/pomodoro.png";
 import budgety from "../images/budgety.png";
 import nexter from "../images/nexter.png";
 import pxlLogo from "../images/pxl_logo.png";
+import wisemenLogo from "../images/wisemen_logo.png";
 import kabisaLogo from "../images/kabisa_logo.png";
 import dovetailLogo from "../images/dovetail_logo.png";
 import psm1Badge from "../images/psmi.png";
@@ -190,10 +191,19 @@ export default class IndexPage extends Component {
               </header>
               <Features>
                 <FeaturedItem
+                  url="https://www.wisemen.digital"
+                  pic={wisemenLogo}
+                  picFit="contain"
+                  title="Front-end web developer at Wisemen"
+                >
+                  From July 2021 to present I'm working as a front-end developer
+                  at <a href="https://www.wisemen.digital">Wisemen</a>.
+                </FeaturedItem>
+                <FeaturedItem
                   url="https://www.dovetail.world/en/"
                   pic={dovetailLogo}
                   picFit={"contain"}
-                  title="Web developer at Dovetail"
+                  title="Full Stack Web Developer at Dovetail"
                 >
                   From July 2017 until July 2021 I worked as a full stack web
                   developer at{" "}
