@@ -29,6 +29,7 @@
     display: block;
     margin: 0 auto _size(element-margin) auto;
     width: 8em;
+    border: 5px solid _palette(border);
 }
 
 @include breakpoint('<=xlarge') {
