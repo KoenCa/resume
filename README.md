@@ -1,6 +1,5 @@
 # Resume
 
-
 My personal resume built using [GatsbyJS](https://www.gatsbyjs.com/) with the
 `Read Only` design from [HTML5 UP](https://html5up.net/). I converted most of the
 design to React components, because I like to work with building blocks that can be
@@ -26,6 +25,9 @@ It is self-hosted on a Hetzner VPS with the open-source self hosting software Co
 my own domain: https://www.koencastermans.com/. Every push
 to the `master` branch will trigger a production deploy. All pull requests will
 get a separate deploy to review the changes in a safe environment.
+
+I also self-host the Plausible analytics tool for the website with Coolify which
+allows me to have privacy friendly analytics.
 
 ## Requirements
 
