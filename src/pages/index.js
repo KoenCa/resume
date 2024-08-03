@@ -252,20 +252,19 @@ export default class IndexPage extends Component {
               <FeatureList>
                 <FeatureListItem icon={faHtml5}>HTML</FeatureListItem>
                 <FeatureListItem icon={faCss3Alt}>
-                  CSS: Sass, Bootstrap, BEM, modules, flexbox, grid
+                  CSS: TailwindCSS, Sass, BEM,
                 </FeatureListItem>
                 <FeatureListItem icon={faJsSquare}>
-                  JS: ECMAScript, Coffeescript, TypeScript
+                  JS: TypeScript, Coffeescript
                 </FeatureListItem>
                 <FeatureListItem icon={faJsSquare}>
-                  UI: React, Backbone, Marionette, jQuery, Angular
+                  UI: React, VueJS, Backbone, Marionette, jQuery
                 </FeatureListItem>
                 <FeatureListItem icon={faVial}>
-                  Testing: Karma, Cypress
+                  Testing: Cypress, Jest, Karma
                 </FeatureListItem>
                 <FeatureListItem icon={faToolbox}>
-                  Tools: Webpack, Parcel, ESLint, Prettier, GatsbyJS,
-                  Docusaurus, Electron
+                  Tools: NX, Webpack, Vite, React Native, NuxtJS, Gatsby
                 </FeatureListItem>
               </FeatureList>
 
