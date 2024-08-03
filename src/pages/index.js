@@ -16,6 +16,7 @@ import pomodoro from "../images/pomodoro.png";
 import budgety from "../images/budgety.png";
 import nexter from "../images/nexter.png";
 import pxlLogo from "../images/pxl_logo.png";
+import climapulseLogo from "../images/climapulse_logo.png";
 import wisemenLogo from "../images/wisemen_logo.png";
 import kabisaLogo from "../images/kabisa_logo.png";
 import dovetailLogo from "../images/dovetail_logo.png";
@@ -126,14 +127,24 @@ export default class IndexPage extends Component {
               </header>
               <Features>
                 <FeaturedItem
+                  url="https://climapulse.com/"
+                  pic={climapulseLogo}
+                  picFit="contain"
+                  title="Front-end web developer at Climapulse"
+                >
+                  From December 2023 to present I'm working as a
+                  front-end developer at{" "}
+                  <a href="https://climapulse.com/">Climapulse</a>.
+                </FeaturedItem>
+                <FeaturedItem
                   url="https://www.wisemen.digital"
                   pic={wisemenLogo}
                   picFit="contain"
                   title="Front-end web developer at Wisemen"
                 >
-                  From September 2021 to present I'm working as a front-end
-                  developer at <a href="https://www.wisemen.digital">Wisemen</a>
-                  .
+                  From September 2021 until december 2023 I worked as a
+                  front-end developer at{" "}
+                  <a href="https://www.wisemen.digital">Wisemen</a>.
                 </FeaturedItem>
                 <FeaturedItem
                   url="https://www.dovetail.world/en/"
