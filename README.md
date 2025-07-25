@@ -21,21 +21,16 @@ Other noteworthy things:
 
 ## Hosting
 
-It is self-hosted on a Hetzner VPS with the open-source self hosting software Coolify with
-my own domain: https://www.koencastermans.com/. Every push
-to the `master` branch will trigger a production deploy. All pull requests will
-get a separate deploy to review the changes in a safe environment.
-
-I also self-host the Plausible analytics tool for the website with Coolify which
-allows me to have privacy friendly analytics.
+Hosting on GitHub Pages by building and deploying via GitHub Actions, see `gatsby.yml` for the config.
 
 ## Requirements
 
-- Node: version 18
-- [gatsby-cli](https://www.npmjs.com/package/gatsby-cli) (I used version `5.12.1`)
+- Node: latest LTS
+- [gatsby-cli](https://www.npmjs.com/package/gatsby-cli)
+
 ## Development
 
-The first time the dependencies need to be installed by running `npm install` in the terminal.
+The first time the dependencies need to be installed by running `npm install --legacy-peer-deps` in the terminal.
 
 To start the local development server run the following command:
 
