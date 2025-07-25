@@ -132,9 +132,8 @@ export default class IndexPage extends Component {
                   picFit="contain"
                   title="Front-end web developer at Climapulse"
                 >
-                  From December 2023 to present I'm working as a
-                  front-end developer at{" "}
-                  <a href="https://climapulse.com/">Climapulse</a>.
+                  From December 2023 to present I'm working as a front-end
+                  developer at <a href="https://climapulse.com/">Climapulse</a>.
                 </FeaturedItem>
                 <FeaturedItem
                   url="https://www.wisemen.digital"
@@ -346,7 +345,7 @@ export default class IndexPage extends Component {
                   .
                 </FeaturedItem>
                 <FeaturedItem
-                  url="https://koen-castermans-budget.netlify.com/"
+                  url="https://koen-castermans-budget.netlify.app/"
                   pic={budgety}
                   title="Simple monthly budget app"
                 >
@@ -361,7 +360,7 @@ export default class IndexPage extends Component {
                   .
                 </FeaturedItem>
                 <FeaturedItem
-                  url="https://koen-castermans-nexter.netlify.com/"
+                  url="https://koen-castermans-nexter.netlify.app/"
                   pic={nexter}
                   title="Realtors website design"
                 >
