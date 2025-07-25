@@ -24,7 +24,6 @@ const Layout = ({ children }) => (
           ]}
         >
           <html lang="en" />
-          <script defer data-domain="koencastermans.com" src="https://analytics.koencastermans.com/js/plausible.js"></script>
         </Helmet>
         <main>{children}</main>
       </>
